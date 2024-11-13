@@ -1,0 +1,39 @@
+{
+  "A": {
+    "background": {
+      "type": "AI",
+      "mainTitle": "fond_",
+      "nbImage": 47,
+      "loop": true,
+      "width": 480.0,
+      "height": 320.0,
+      "frameRate": 0.5
+    },
+    "animatedText": {
+      "type": "CT",
+      "textToPrint": "Bonjour chers utilisateurs de l'A M E S (Amplificateur Mediumnique\nExtrasensoriel) Version trois point zéro. Vous avez été sélectionné par\nL'Agence pour notre programme de recherche sur le potentiel médiumnique\nde la population.\n\nTapez pour continuer.",
+      "width": 10.0,
+      "height": 10.0,
+      "anchorInput": "topLeft",
+      "textRendererInput": "animatedTextStyle"
+    },
+    "versionText": {
+      "type": "TC",
+      "text": "version 3.0",
+      "width": 10.0,
+      "height": 10.0,
+      "anchor": "center",
+      "textRenderer": "versionStyle"
+    },
+    "titleText": {
+      "type": "TC",
+      "text": "a·m·e·s·",
+      "width": 10.0,
+      "height": 10.0,
+      "anchor": "center",
+      "textRenderer": "titleStyle"
+    }
+  },
+  "M": {},
+  "D": {}
+}
