@@ -1,0 +1,617 @@
+[
+  {
+    "type": "SP",
+    "filename": "start",
+    "x": 750.0,
+    "y": 340.0,
+    "originWidth": 150.0,
+    "originHeight": 92.0,
+    "anchor": "",
+    "isTapable": true,
+    "eventName": "continueDraw"
+  },
+  {
+    "type": "TC",
+    "text": "AMES is ready, press start",
+    "x": 300.0,
+    "y": 150.0,
+    "fontSize": 20.0,
+    "color": "white",
+    "anchor": "topLeft"
+  },
+  {
+    "type": "SR"
+  },
+  {
+    "type": "RMA"
+  },
+  {
+    "type": "SO",
+    "filename": "Ames_musique_intro",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "SP",
+    "filename": "imageBoot",
+    "x": 450.0,
+    "y": 160.0,
+    "originWidth": 480.0,
+    "originHeight": 320.0,
+    "anchor": "",
+    "isTapable": false
+  },
+  {
+    "type": "WA",
+    "duration": 3
+  },
+  {
+    "type": "AI",
+    "filename": "fond_",
+    "nbImage": 47,
+    "loop": true,
+    "x": 0.0,
+    "y": 0.0,
+    "framerate": 0.5,
+    "duration": 16,
+    "imageWidth": 480.0,
+    "imageHeight": 320.0,
+    "modifiedWidth": 900.0,
+    "modifiedHeight": 480.0,
+    "isTapable": false,
+    "anchor": "topLeft"
+  },
+  {
+    "type": "WA",
+    "duration": 3
+  },
+  {
+    "type": "GM",
+    "name": "onClickOnScreenContinueDrawEvent"
+  },
+  {
+    "type": "SO",
+    "filename": "Ames_text_beep",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "AT",
+    "text": "Bonjour chers utilisateurs de l'A M E S (Amplificateur Mediumnique\nExtrasensoriel) Version trois point zéro. Vous avez été sélectionné par\nL'Agence pour notre programme de recherche sur le potentiel médiumnique\nde la population.\n\nTapez pour continuer.",
+    "x": 100.0,
+    "y": 150.0,
+    "fontSize": 20.0,
+    "color": "white",
+    "duration": 0,
+    "anchor": "topLeft",
+    "printSpeed": 0.05,
+    "isTapable": false
+  },
+  {
+    "type": "SR"
+  },
+  {
+    "type": "RM",
+    "name": "introText1"
+  },
+  {
+    "type": "SO",
+    "filename": "Ames_text_beep",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "AT",
+    "text": "Le programme A M E S que vous venez d'installer transforme votre téléphone\nen véritable antenne à auras. Si votre sensibilité médiumnique est assez\nélevée, l'Agence vous recontactera pour de plus amples informations et de\nnouvelles consignes.\n\nTapez pour continuer.",
+    "x": 100.0,
+    "y": 150.0,
+    "fontSize": 20.0,
+    "color": "white",
+    "duration": 5,
+    "anchor": "topLeft",
+    "printSpeed": 0.05,
+    "isTapable": false
+  },
+  {
+    "type": "SR"
+  },
+  {
+    "type": "RM",
+    "name": "introText2"
+  },
+  {
+    "type": "GM",
+    "name": "empty"
+  },
+  {
+    "type": "SO",
+    "filename": "Ames_text_beep",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "AT",
+    "text": "Nous allons maintenant procéder à quelques étapes préparatoires pour le\ntest. Veuillez répondre aux questions suivantes. Confirmez vous que vous\nêtes bien à votre domicile ?",
+    "x": 100.0,
+    "y": 150.0,
+    "fontSize": 20.0,
+    "color": "white",
+    "duration": 5,
+    "anchor": "topLeft",
+    "printSpeed": 0.05,
+    "isTapable": false
+  },
+  {
+    "type": "WA",
+    "duration": 10
+  },
+  {
+    "type": "SP",
+    "filename": "yes",
+    "x": 200.0,
+    "y": 340.0,
+    "originWidth": 150.0,
+    "originHeight": 92.0,
+    "anchor": "",
+    "isTapable": true,
+    "eventName": "continueDraw"
+  },
+  {
+    "type": "SP",
+    "filename": "no",
+    "x": 700.0,
+    "y": 340.0,
+    "originWidth": 150.0,
+    "originHeight": 92.0,
+    "anchor": "",
+    "isTapable": true,
+    "eventName": "killApp"
+  },
+  {
+    "type": "SR"
+  },
+  {
+    "type": "RM",
+    "name": "introText3"
+  },
+  {
+    "type": "RM",
+    "name": "yesButton"
+  },
+  {
+    "type": "RM",
+    "name": "noButton"
+  },
+  {
+    "type": "SO",
+    "filename": "Ames_text_beep",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "AT",
+    "text": "Merci. Le test que vous allez subir ne doit pas être interrompu. Pouvez vous\négalement confirmer que vous avez une dizaine de minutes devant vous ?",
+    "x": 100.0,
+    "y": 150.0,
+    "fontSize": 20.0,
+    "color": "white",
+    "duration": 5,
+    "anchor": "topLeft",
+    "printSpeed": 0.05,
+    "isTapable": false
+  },
+  {
+    "type": "WA",
+    "duration": 8
+  },
+  {
+    "type": "SP",
+    "filename": "yes",
+    "x": 200.0,
+    "y": 340.0,
+    "originWidth": 150.0,
+    "originHeight": 92.0,
+    "anchor": "",
+    "isTapable": true,
+    "eventName": "continueDraw"
+  },
+  {
+    "type": "SP",
+    "filename": "no",
+    "x": 700.0,
+    "y": 340.0,
+    "originWidth": 150.0,
+    "originHeight": 92.0,
+    "anchor": "",
+    "isTapable": true,
+    "eventName": "killApp"
+  },
+  {
+    "type": "SR"
+  },
+  {
+    "type": "RM",
+    "name": "introText4"
+  },
+  {
+    "type": "RM",
+    "name": "yesButton2"
+  },
+  {
+    "type": "RM",
+    "name": "noButton2"
+  },
+  {
+    "type": "SO",
+    "filename": "Ames_text_beep",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "AT",
+    "text": "Merci. Si vous acceptez de participer à ce test et acceptez\nles conditions précédemment définies, veuillez appliquer\nvotre pouce sur le lecteur qui apparait à l'écran. Votre\nempreinte digitale fera office de signature.",
+    "x": 100.0,
+    "y": 150.0,
+    "fontSize": 20.0,
+    "color": "white",
+    "duration": 5,
+    "anchor": "topLeft",
+    "printSpeed": 0.05,
+    "isTapable": false
+  },
+  {
+    "type": "WA",
+    "duration": 12
+  },
+  {
+    "type": "SP",
+    "filename": "scanButton",
+    "x": 750.0,
+    "y": 300.0,
+    "originWidth": 79.0,
+    "originHeight": 191.0,
+    "anchor": "",
+    "isTapable": true,
+    "eventName": "continueDraw"
+  },
+  {
+    "type": "SR"
+  },
+  {
+    "type": "RM",
+    "name": "scanButton"
+  },
+  {
+    "type": "SO",
+    "filename": "Ames_scan_empreinte",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "SP",
+    "filename": "fingerPrint",
+    "x": 750.0,
+    "y": 300.0,
+    "originWidth": 85.0,
+    "originHeight": 197.0,
+    "anchor": "",
+    "isTapable": false,
+    "eventName": "empty"
+  },
+  {
+    "type": "WA",
+    "duration": 1
+  },
+  {
+    "type": "MI",
+    "filename": "scanEmpreinte_0",
+    "xBegin": 750.0,
+    "yBegin": 200.0,
+    "xEnd": 750.0,
+    "yEnd": 500.0,
+    "width": 131.0,
+    "height": 73.0,
+    "speedMultiplicator": 2.0,
+    "loop": false,
+    "anchor": ""
+  },
+  {
+    "type": "WA",
+    "duration": 5
+  },
+  {
+    "type": "RMA"
+  },
+  {
+    "type": "SO",
+    "filename": "Ames_sonnerie",
+    "loop": true,
+    "volume": 100
+  },
+  {
+    "type": "SP",
+    "filename": "appel",
+    "x": 415.0,
+    "y": 240.0,
+    "originWidth": 480.0,
+    "originHeight": 320.0,
+    "sizeMultiplicator": 1.5,
+    "anchor": "",
+    "isTapable": false,
+    "eventName": "empty"
+  },
+  {
+    "type": "SP",
+    "filename": "refuse",
+    "x": 200.0,
+    "y": 330.0,
+    "originWidth": 202.0,
+    "originHeight": 80.0,
+    "anchor": "",
+    "isTapable": true,
+    "eventName": "killApp"
+  },
+  {
+    "type": "SP",
+    "filename": "answer",
+    "x": 625.0,
+    "y": 330.0,
+    "originWidth": 202.0,
+    "originHeight": 80.0,
+    "anchor": "",
+    "isTapable": true,
+    "eventName": "continueDraw"
+  },
+  {
+    "type": "SR"
+  },
+  {
+    "type": "STS",
+    "name": "sound7"
+  },
+  {
+    "type": "RMA"
+  },
+  {
+    "type": "SP",
+    "filename": "imageBoot",
+    "x": 450.0,
+    "y": 160.0,
+    "originWidth": 480.0,
+    "originHeight": 320.0,
+    "anchor": "",
+    "isTapable": false
+  },
+  {
+    "type": "WA",
+    "duration": 1
+  },
+  {
+    "type": "SO",
+    "filename": "Ames_bruit",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "WA",
+    "duration": 4
+  },
+  {
+    "type": "RM",
+    "name": "title"
+  },
+  {
+    "type": "AI",
+    "filename": "bruit_",
+    "nbImage": 28,
+    "loop": false,
+    "x": 0.0,
+    "y": 0.0,
+    "framerate": 0.1,
+    "duration": 16,
+    "imageWidth": 480.0,
+    "imageHeight": 320.0,
+    "modifiedWidth": 900.0,
+    "modifiedHeight": 410.0,
+    "isTapable": false,
+    "anchor": "topLeft"
+  },
+  {
+    "type": "WA",
+    "duration": 5
+  },
+  {
+    "type": "SO",
+    "filename": "Ames_Bruit_de_fonctionnement",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "WA",
+    "duration": 2
+  },
+  {
+    "type": "SO",
+    "filename": "Ames_affichage_grille",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "AI",
+    "filename": "grille_",
+    "nbImage": 26,
+    "loop": false,
+    "x": 0.0,
+    "y": 0.0,
+    "framerate": 0.1,
+    "duration": 16,
+    "imageWidth": 480.0,
+    "imageHeight": 320.0,
+    "modifiedWidth": 900.0,
+    "modifiedHeight": 410.0,
+    "isTapable": false,
+    "anchor": "topLeft"
+  },
+  {
+    "type": "WA",
+    "duration": 3
+  },
+  {
+    "type": "RMA"
+  },
+  {
+    "type": "SP",
+    "filename": "grille_25",
+    "x": 0.0,
+    "y": 0.0,
+    "originWidth": 480.0,
+    "originHeight": 320.0,
+    "width": 900.0,
+    "height": 410.0,
+    "anchor": "topLeft",
+    "sizeMultiplicator": 1.3,
+    "isTapable": false
+  },
+  {
+    "type": "MI",
+    "filename": "faisceau_0",
+    "xBegin": 0.0,
+    "yBegin": 160.0,
+    "xEnd": 900.0,
+    "yEnd": 100.0,
+    "width": 33.0,
+    "height": 320.0,
+    "modifiedWidth": 33.0,
+    "modifiedHeight": 500.0,
+    "speedMultiplicator": 0.5,
+    "loop": true,
+    "anchor": ""
+  },
+  {
+    "type": "WA",
+    "duration": 1
+  },
+  {
+    "type": "CA",
+    "activate": true
+  },
+  {
+    "type": "SP",
+    "filename": "battery_full",
+    "x": 800.0,
+    "y": 33.0,
+    "originWidth": 44.0,
+    "originHeight": 27.0,
+    "width": 44.0,
+    "height": 27.0,
+    "anchor": "topLeft",
+    "isTapable": false
+  },
+  {
+    "type": "WA",
+    "duration": 1
+  },
+  {
+    "type": "DT",
+    "x": 600.0,
+    "y": 35.0,
+    "fontSize": 20.0,
+    "color": "white",
+    "anchor": "topLeft"
+  },
+  {
+    "type": "WA",
+    "duration": 1
+  },
+  {
+    "type": "TC",
+    "text": "Stress Status : 25/100",
+    "x": 150.0,
+    "y": 35.0,
+    "fontSize": 20.0,
+    "color": "white",
+    "anchor": "topLeft"
+  },
+  {
+    "type": "WA",
+    "duration": 1
+  },
+  {
+    "type": "AI",
+    "filename": "oeil_",
+    "nbImage": 11,
+    "loop": true,
+    "x": 0.0,
+    "y": 0.0,
+    "framerate": 0.1,
+    "duration": 16,
+    "imageWidth": 80.0,
+    "imageHeight": 92.0,
+    "sizeMultiplicator": 1.3,
+    "isTapable": false,
+    "anchor": "topLeft"
+  },
+  {
+    "type": "WA",
+    "duration": 3
+  },
+  {
+    "type": "AI",
+    "filename": "ekg_",
+    "nbImage": 30,
+    "loop": true,
+    "x": 0.0,
+    "y": 330.0,
+    "framerate": 0.05,
+    "duration": 16,
+    "imageWidth": 480.0,
+    "imageHeight": 80.0,
+    "modifiedWidth": 900.0,
+    "modifiedHeight": 80.0,
+    "isTapable": false,
+    "anchor": "topLeft"
+  },
+  {
+    "type": "SO",
+    "filename": "Ames_coeur_01",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "SO",
+    "filename": "Diane_Bonjour",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "WA",
+    "duration": 8
+  },
+  {
+    "type": "SO",
+    "filename": "Diane_Noir_total",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "WA",
+    "duration": 21
+  },
+  {
+    "type": "SO",
+    "filename": "Diane_Message_scan",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "WA",
+    "duration": 47
+  },
+  {
+    "type": "TL",
+    "activate": true
+  },
+  {
+    "type": "SR"
+  }
+]
