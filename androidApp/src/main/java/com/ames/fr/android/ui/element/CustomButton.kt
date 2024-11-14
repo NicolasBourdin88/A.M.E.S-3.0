@@ -16,8 +16,8 @@ import com.ames.fr.data.model.Event
 @Composable
 fun CustomButton(event: Event, onClick: () -> Unit) {
     val fileName = event.fileName!!
-    val x = event.x!!
-    val y = event.y!!
+    val xPercentage = event.x!!
+    val yPercentage = event.y!!
     val originWidth = event.originWidth!!
     val originHeight = event.originHeight!!
     val isClickable = event.isTappable!!
@@ -27,9 +27,8 @@ fun CustomButton(event: Event, onClick: () -> Unit) {
     val configuration = LocalConfiguration.current
     val screenWidth = configuration.screenWidthDp
     val screenHeight = configuration.screenHeightDp
-    val adjustedX = (x / 1000f) * screenWidth
-    val adjustedY = (y / 1000f) * screenHeight
-
+    val adjustedX = xPercentage * screenWidth
+    val adjustedY = yPercentage * screenHeight
 
     Image(
         painter = painter,
