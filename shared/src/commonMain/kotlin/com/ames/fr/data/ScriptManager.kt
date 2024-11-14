@@ -1,6 +1,6 @@
 package com.ames.fr.data
 
-import com.ames.fr.data.model.RawEvent
+import com.ames.fr.data.model.Event
 import kotlinx.serialization.json.Json
 
 class ScriptManager {
@@ -9,8 +9,8 @@ class ScriptManager {
             ignoreUnknownKeys = true
         }
 
-        fun getEventList(jsonValue: String): List<RawEvent> {
-            return json.decodeFromString<List<RawEvent>>(jsonValue)
+        fun getEventList(jsonValue: String): List<Event> {
+            return json.decodeFromString<List<Event>>(jsonValue)
         }
     }
 }

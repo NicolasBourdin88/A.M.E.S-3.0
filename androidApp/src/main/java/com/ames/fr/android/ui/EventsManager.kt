@@ -1,7 +1,6 @@
 package com.ames.fr.android.ui
 
 import android.content.res.Resources
-import android.util.Log
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -11,7 +10,7 @@ import androidx.compose.runtime.remember
 import com.ames.fr.android.R
 import com.ames.fr.android.ui.element.CustomButton
 import com.ames.fr.data.ScriptManager
-import com.ames.fr.data.model.RawEvent
+import com.ames.fr.data.model.Event
 import com.ames.fr.data.model.TypeEvent
 import kotlinx.coroutines.delay
 
@@ -20,7 +19,7 @@ fun EventsManager(resources: Resources) {
     val eventList = remember { getAllEventsFromJson(resources) }
     val shouldRead = remember { mutableStateOf(true) }
 
-    val eventsToDisplay = remember { mutableStateListOf<RawEvent>() }
+    val eventsToDisplay = remember { mutableStateListOf<Event>() }
     LaunchedEffect(shouldRead.value) {
         if (shouldRead.value) {
             for (event in eventList) {
@@ -50,7 +49,7 @@ fun EventsManager(resources: Resources) {
 
 @Composable
 private fun DisplayEvents(
-    eventsToDisplay: List<RawEvent>,
+    eventsToDisplay: List<Event>,
     onShouldReadChange: () -> Unit,
     onRemoveAllAction: () -> Unit,
 ) {
@@ -74,7 +73,7 @@ private fun DisplayEvents(
     }
 }
 
-private fun getAllEventsFromJson(resources: Resources): MutableList<RawEvent> {
+private fun getAllEventsFromJson(resources: Resources): MutableList<Event> {
     val inputStream = resources.openRawResource(R.raw.script)
     val jsonString = inputStream.bufferedReader().use { it.readText() }
     val eventList = ScriptManager.getEventList(jsonString).toMutableList()

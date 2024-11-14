@@ -11,10 +11,10 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import com.ames.fr.data.model.RawEvent
+import com.ames.fr.data.model.Event
 
 @Composable
-fun CustomButton(event: RawEvent, onClick: () -> Unit) {
+fun CustomButton(event: Event, onClick: () -> Unit) {
     val fileName = event.fileName!!
     val x = event.x!!
     val y = event.y!!

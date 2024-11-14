@@ -3,7 +3,7 @@ package com.ames.fr.data.model
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class RawEvent(
+data class Event(
     val type: TypeEvent,
     val fileName: String? = null,
     val text: String? = null,
