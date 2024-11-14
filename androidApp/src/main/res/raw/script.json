@@ -2,8 +2,8 @@
   {
     "type": "SP",
     "fileName": "start",
-    "x": 750.0,
-    "y": 340.0,
+    "x": 0.75,
+    "y": 0.60,
     "originWidth": 150.0,
     "originHeight": 92.0,
     "anchor": "",
@@ -13,8 +13,8 @@
   {
     "type": "TC",
     "text": "AMES is ready, press start",
-    "x": 300.0,
-    "y": 150.0,
+    "x": 0,
+    "y": 0,
     "fontSize": 20.0,
     "color": "white",
     "anchor": "topLeft"
@@ -34,8 +34,8 @@
   {
     "type": "SP",
     "fileName": "image_boot",
-    "x": 450.0,
-    "y": 160.0,
+    "x": 0.25,
+    "y": 0,
     "originWidth": 480.0,
     "originHeight": 320.0,
     "anchor": "",
@@ -67,7 +67,7 @@
   },
   {
     "type": "GM",
-    "name": "onClickOnScreenContinueDrawEvent"
+    "eventName": "onClickOnScreenContinueDrawEvent"
   },
   {
     "type": "SO",
@@ -76,10 +76,11 @@
     "volume": 100
   },
   {
+    "eventName": "introText1",
     "type": "AT",
     "text": "Bonjour chers utilisateurs de l'A M E S (Amplificateur Mediumnique\nExtrasensoriel) Version trois point zéro. Vous avez été sélectionné par\nL'Agence pour notre programme de recherche sur le potentiel médiumnique\nde la population.\n\nTapez pour continuer.",
-    "x": 100.0,
-    "y": 150.0,
+    "x": 0,
+    "y": 0.4,
     "fontSize": 20.0,
     "color": "white",
     "duration": 0,
@@ -92,7 +93,7 @@
   },
   {
     "type": "RM",
-    "name": "introText1"
+    "eventName": "introText1"
   },
   {
     "type": "SO",
@@ -101,10 +102,11 @@
     "volume": 100
   },
   {
+    "eventName": "introText2",
     "type": "AT",
     "text": "Le programme A M E S que vous venez d'installer transforme votre téléphone\nen véritable antenne à auras. Si votre sensibilité médiumnique est assez\nélevée, l'Agence vous recontactera pour de plus amples informations et de\nnouvelles consignes.\n\nTapez pour continuer.",
-    "x": 100.0,
-    "y": 150.0,
+    "x": 0,
+    "y": 0.4,
     "fontSize": 20.0,
     "color": "white",
     "duration": 5,
@@ -117,11 +119,11 @@
   },
   {
     "type": "RM",
-    "name": "introText2"
+    "eventName": "introText2"
   },
   {
     "type": "GM",
-    "name": "empty"
+    "eventName": "empty"
   },
   {
     "type": "SO",
@@ -130,10 +132,11 @@
     "volume": 100
   },
   {
+    "eventName": "introText3",
     "type": "AT",
     "text": "Nous allons maintenant procéder à quelques étapes préparatoires pour le\ntest. Veuillez répondre aux questions suivantes. Confirmez vous que vous\nêtes bien à votre domicile ?",
-    "x": 100.0,
-    "y": 150.0,
+    "x": 0,
+    "y": 0.4,
     "fontSize": 20.0,
     "color": "white",
     "duration": 5,
@@ -146,41 +149,41 @@
     "duration": 10
   },
   {
+    "eventName": "yesButton",
     "type": "SP",
     "fileName": "yes",
-    "x": 200.0,
-    "y": 340.0,
+    "x": 0.05,
+    "y": 0.70,
     "originWidth": 150.0,
     "originHeight": 92.0,
     "anchor": "",
-    "isTappable": true,
-    "eventName": "continueDraw"
+    "isTappable": true
   },
   {
+    "eventName": "noButton",
     "type": "SP",
     "fileName": "no",
-    "x": 700.0,
-    "y": 340.0,
+    "x": 0.8,
+    "y": 0.70,
     "originWidth": 150.0,
     "originHeight": 92.0,
     "anchor": "",
-    "isTappable": true,
-    "eventName": "killApp"
+    "isTappable": true
   },
   {
     "type": "SR"
   },
   {
     "type": "RM",
-    "name": "introText3"
+    "eventName": "introText3"
   },
   {
     "type": "RM",
-    "name": "yesButton"
+    "eventName": "yesButton"
   },
   {
     "type": "RM",
-    "name": "noButton"
+    "eventName": "noButton"
   },
   {
     "type": "SO",
@@ -189,10 +192,11 @@
     "volume": 100
   },
   {
+    "eventName": "introText4",
     "type": "AT",
     "text": "Merci. Le test que vous allez subir ne doit pas être interrompu. Pouvez vous\négalement confirmer que vous avez une dizaine de minutes devant vous ?",
-    "x": 100.0,
-    "y": 150.0,
+    "x": 0,
+    "y": 0.4,
     "fontSize": 20.0,
     "color": "white",
     "duration": 5,
@@ -205,41 +209,41 @@
     "duration": 8
   },
   {
+    "eventName": "yesButton2",
     "type": "SP",
     "fileName": "yes",
-    "x": 200.0,
-    "y": 340.0,
+    "x": 0.05,
+    "y": 0.70,
     "originWidth": 150.0,
     "originHeight": 92.0,
     "anchor": "",
-    "isTappable": true,
-    "eventName": "continueDraw"
+    "isTappable": true
   },
   {
+    "eventName": "noButton2",
     "type": "SP",
     "fileName": "no",
-    "x": 700.0,
-    "y": 340.0,
+    "x": 0.8,
+    "y": 0.70,
     "originWidth": 150.0,
     "originHeight": 92.0,
     "anchor": "",
-    "isTappable": true,
-    "eventName": "killApp"
+    "isTappable": true
   },
   {
     "type": "SR"
   },
   {
     "type": "RM",
-    "name": "introText4"
+    "eventName": "introText4"
   },
   {
     "type": "RM",
-    "name": "yesButton2"
+    "eventName": "yesButton2"
   },
   {
     "type": "RM",
-    "name": "noButton2"
+    "eventName": "noButton2"
   },
   {
     "type": "SO",
@@ -250,8 +254,8 @@
   {
     "type": "AT",
     "text": "Merci. Si vous acceptez de participer à ce test et acceptez\nles conditions précédemment définies, veuillez appliquer\nvotre pouce sur le lecteur qui apparait à l'écran. Votre\nempreinte digitale fera office de signature.",
-    "x": 100.0,
-    "y": 150.0,
+    "x": 0,
+    "y": 0.4,
     "fontSize": 20.0,
     "color": "white",
     "duration": 5,
@@ -264,22 +268,22 @@
     "duration": 12
   },
   {
+    "eventName": "scanButton",
     "type": "SP",
     "fileName": "scan_button",
-    "x": 750.0,
-    "y": 300.0,
+    "x": 0.7,
+    "y": 0.30,
     "originWidth": 79.0,
     "originHeight": 191.0,
     "anchor": "",
-    "isTappable": true,
-    "eventName": "continueDraw"
+    "isTappable": true
   },
   {
     "type": "SR"
   },
   {
     "type": "RM",
-    "name": "scanButton"
+    "eventName": "scanButton"
   },
   {
     "type": "SO",
@@ -290,8 +294,8 @@
   {
     "type": "SP",
     "fileName": "finger_print",
-    "x": 750.0,
-    "y": 300.0,
+    "x": 0.7,
+    "y": 0.30,
     "originWidth": 85.0,
     "originHeight": 197.0,
     "anchor": "",
@@ -305,10 +309,10 @@
   {
     "type": "MI",
     "fileName": "scanEmpreinte_0",
-    "xBegin": 750.0,
-    "yBegin": 200.0,
-    "xEnd": 750.0,
-    "yEnd": 500.0,
+    "xBegin": 0.7,
+    "yBegin": 0.3,
+    "xEnd": 0.7,
+    "yEnd": 0.5,
     "width": 131.0,
     "height": 73.0,
     "speedMultiplicator": 2.0,
@@ -367,7 +371,7 @@
   },
   {
     "type": "STS",
-    "name": "sound7"
+    "eventName": "sound7"
   },
   {
     "type": "RMA"
@@ -398,7 +402,7 @@
   },
   {
     "type": "RM",
-    "name": "title"
+    "eventName": "title"
   },
   {
     "type": "AI",
