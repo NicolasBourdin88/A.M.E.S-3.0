@@ -3,7 +3,7 @@ package com.ames.fr.data
 import com.ames.fr.data.model.Event
 import kotlinx.serialization.json.Json
 
-class GameManager {
+class ScriptManager {
     companion object {
         private val json = Json {
             ignoreUnknownKeys = true

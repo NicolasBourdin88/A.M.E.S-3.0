@@ -1,13 +1,13 @@
 [
   {
     "type": "SP",
-    "filename": "start",
+    "fileName": "start",
     "x": 750.0,
     "y": 340.0,
     "originWidth": 150.0,
     "originHeight": 92.0,
     "anchor": "",
-    "isTapable": true,
+    "isTappable": true,
     "eventName": "continueDraw"
   },
   {
@@ -27,19 +27,19 @@
   },
   {
     "type": "SO",
-    "filename": "Ames_musique_intro",
+    "fileName": "Ames_musique_intro",
     "loop": false,
     "volume": 100
   },
   {
     "type": "SP",
-    "filename": "imageBoot",
+    "fileName": "image_boot",
     "x": 450.0,
     "y": 160.0,
     "originWidth": 480.0,
     "originHeight": 320.0,
     "anchor": "",
-    "isTapable": false
+    "isTappable": false
   },
   {
     "type": "WA",
@@ -47,7 +47,7 @@
   },
   {
     "type": "AI",
-    "filename": "fond_",
+    "fileName": "fond_",
     "nbImage": 47,
     "loop": true,
     "x": 0.0,
@@ -58,7 +58,7 @@
     "imageHeight": 320.0,
     "modifiedWidth": 900.0,
     "modifiedHeight": 480.0,
-    "isTapable": false,
+    "isTappable": false,
     "anchor": "topLeft"
   },
   {
@@ -71,7 +71,7 @@
   },
   {
     "type": "SO",
-    "filename": "Ames_text_beep",
+    "fileName": "Ames_text_beep",
     "loop": false,
     "volume": 100
   },
@@ -85,7 +85,7 @@
     "duration": 0,
     "anchor": "topLeft",
     "printSpeed": 0.05,
-    "isTapable": false
+    "isTappable": false
   },
   {
     "type": "SR"
@@ -96,7 +96,7 @@
   },
   {
     "type": "SO",
-    "filename": "Ames_text_beep",
+    "fileName": "Ames_text_beep",
     "loop": false,
     "volume": 100
   },
@@ -110,7 +110,7 @@
     "duration": 5,
     "anchor": "topLeft",
     "printSpeed": 0.05,
-    "isTapable": false
+    "isTappable": false
   },
   {
     "type": "SR"
@@ -125,7 +125,7 @@
   },
   {
     "type": "SO",
-    "filename": "Ames_text_beep",
+    "fileName": "Ames_text_beep",
     "loop": false,
     "volume": 100
   },
@@ -139,7 +139,7 @@
     "duration": 5,
     "anchor": "topLeft",
     "printSpeed": 0.05,
-    "isTapable": false
+    "isTappable": false
   },
   {
     "type": "WA",
@@ -147,24 +147,24 @@
   },
   {
     "type": "SP",
-    "filename": "yes",
+    "fileName": "yes",
     "x": 200.0,
     "y": 340.0,
     "originWidth": 150.0,
     "originHeight": 92.0,
     "anchor": "",
-    "isTapable": true,
+    "isTappable": true,
     "eventName": "continueDraw"
   },
   {
     "type": "SP",
-    "filename": "no",
+    "fileName": "no",
     "x": 700.0,
     "y": 340.0,
     "originWidth": 150.0,
     "originHeight": 92.0,
     "anchor": "",
-    "isTapable": true,
+    "isTappable": true,
     "eventName": "killApp"
   },
   {
@@ -184,7 +184,7 @@
   },
   {
     "type": "SO",
-    "filename": "Ames_text_beep",
+    "fileName": "Ames_text_beep",
     "loop": false,
     "volume": 100
   },
@@ -198,7 +198,7 @@
     "duration": 5,
     "anchor": "topLeft",
     "printSpeed": 0.05,
-    "isTapable": false
+    "isTappable": false
   },
   {
     "type": "WA",
@@ -206,24 +206,24 @@
   },
   {
     "type": "SP",
-    "filename": "yes",
+    "fileName": "yes",
     "x": 200.0,
     "y": 340.0,
     "originWidth": 150.0,
     "originHeight": 92.0,
     "anchor": "",
-    "isTapable": true,
+    "isTappable": true,
     "eventName": "continueDraw"
   },
   {
     "type": "SP",
-    "filename": "no",
+    "fileName": "no",
     "x": 700.0,
     "y": 340.0,
     "originWidth": 150.0,
     "originHeight": 92.0,
     "anchor": "",
-    "isTapable": true,
+    "isTappable": true,
     "eventName": "killApp"
   },
   {
@@ -243,7 +243,7 @@
   },
   {
     "type": "SO",
-    "filename": "Ames_text_beep",
+    "fileName": "Ames_text_beep",
     "loop": false,
     "volume": 100
   },
@@ -257,7 +257,7 @@
     "duration": 5,
     "anchor": "topLeft",
     "printSpeed": 0.05,
-    "isTapable": false
+    "isTappable": false
   },
   {
     "type": "WA",
@@ -265,13 +265,13 @@
   },
   {
     "type": "SP",
-    "filename": "scanButton",
+    "fileName": "scan_button",
     "x": 750.0,
     "y": 300.0,
     "originWidth": 79.0,
     "originHeight": 191.0,
     "anchor": "",
-    "isTapable": true,
+    "isTappable": true,
     "eventName": "continueDraw"
   },
   {
@@ -283,19 +283,19 @@
   },
   {
     "type": "SO",
-    "filename": "Ames_scan_empreinte",
+    "fileName": "Ames_scan_empreinte",
     "loop": false,
     "volume": 100
   },
   {
     "type": "SP",
-    "filename": "fingerPrint",
+    "fileName": "finger_print",
     "x": 750.0,
     "y": 300.0,
     "originWidth": 85.0,
     "originHeight": 197.0,
     "anchor": "",
-    "isTapable": false,
+    "isTappable": false,
     "eventName": "empty"
   },
   {
@@ -304,7 +304,7 @@
   },
   {
     "type": "MI",
-    "filename": "scanEmpreinte_0",
+    "fileName": "scanEmpreinte_0",
     "xBegin": 750.0,
     "yBegin": 200.0,
     "xEnd": 750.0,
@@ -324,42 +324,42 @@
   },
   {
     "type": "SO",
-    "filename": "Ames_sonnerie",
+    "fileName": "Ames_sonnerie",
     "loop": true,
     "volume": 100
   },
   {
     "type": "SP",
-    "filename": "appel",
+    "fileName": "appel",
     "x": 415.0,
     "y": 240.0,
     "originWidth": 480.0,
     "originHeight": 320.0,
     "sizeMultiplicator": 1.5,
     "anchor": "",
-    "isTapable": false,
+    "isTappable": false,
     "eventName": "empty"
   },
   {
     "type": "SP",
-    "filename": "refuse",
+    "fileName": "refuse",
     "x": 200.0,
     "y": 330.0,
     "originWidth": 202.0,
     "originHeight": 80.0,
     "anchor": "",
-    "isTapable": true,
+    "isTappable": true,
     "eventName": "killApp"
   },
   {
     "type": "SP",
-    "filename": "answer",
+    "fileName": "answer",
     "x": 625.0,
     "y": 330.0,
     "originWidth": 202.0,
     "originHeight": 80.0,
     "anchor": "",
-    "isTapable": true,
+    "isTappable": true,
     "eventName": "continueDraw"
   },
   {
@@ -374,13 +374,13 @@
   },
   {
     "type": "SP",
-    "filename": "imageBoot",
+    "fileName": "image_boot",
     "x": 450.0,
     "y": 160.0,
     "originWidth": 480.0,
     "originHeight": 320.0,
     "anchor": "",
-    "isTapable": false
+    "isTappable": false
   },
   {
     "type": "WA",
@@ -388,7 +388,7 @@
   },
   {
     "type": "SO",
-    "filename": "Ames_bruit",
+    "fileName": "Ames_bruit",
     "loop": false,
     "volume": 100
   },
@@ -402,7 +402,7 @@
   },
   {
     "type": "AI",
-    "filename": "bruit_",
+    "fileName": "bruit_",
     "nbImage": 28,
     "loop": false,
     "x": 0.0,
@@ -413,7 +413,7 @@
     "imageHeight": 320.0,
     "modifiedWidth": 900.0,
     "modifiedHeight": 410.0,
-    "isTapable": false,
+    "isTappable": false,
     "anchor": "topLeft"
   },
   {
@@ -422,7 +422,7 @@
   },
   {
     "type": "SO",
-    "filename": "Ames_Bruit_de_fonctionnement",
+    "fileName": "Ames_Bruit_de_fonctionnement",
     "loop": false,
     "volume": 100
   },
@@ -432,13 +432,13 @@
   },
   {
     "type": "SO",
-    "filename": "Ames_affichage_grille",
+    "fileName": "Ames_affichage_grille",
     "loop": false,
     "volume": 100
   },
   {
     "type": "AI",
-    "filename": "grille_",
+    "fileName": "grille_",
     "nbImage": 26,
     "loop": false,
     "x": 0.0,
@@ -449,7 +449,7 @@
     "imageHeight": 320.0,
     "modifiedWidth": 900.0,
     "modifiedHeight": 410.0,
-    "isTapable": false,
+    "isTappable": false,
     "anchor": "topLeft"
   },
   {
@@ -461,7 +461,7 @@
   },
   {
     "type": "SP",
-    "filename": "grille_25",
+    "fileName": "grille_25",
     "x": 0.0,
     "y": 0.0,
     "originWidth": 480.0,
@@ -470,11 +470,11 @@
     "height": 410.0,
     "anchor": "topLeft",
     "sizeMultiplicator": 1.3,
-    "isTapable": false
+    "isTappable": false
   },
   {
     "type": "MI",
-    "filename": "faisceau_0",
+    "fileName": "faisceau_0",
     "xBegin": 0.0,
     "yBegin": 160.0,
     "xEnd": 900.0,
@@ -497,7 +497,7 @@
   },
   {
     "type": "SP",
-    "filename": "battery_full",
+    "fileName": "battery_full",
     "x": 800.0,
     "y": 33.0,
     "originWidth": 44.0,
@@ -505,7 +505,7 @@
     "width": 44.0,
     "height": 27.0,
     "anchor": "topLeft",
-    "isTapable": false
+    "isTappable": false
   },
   {
     "type": "WA",
@@ -538,7 +538,7 @@
   },
   {
     "type": "AI",
-    "filename": "oeil_",
+    "fileName": "oeil_",
     "nbImage": 11,
     "loop": true,
     "x": 0.0,
@@ -548,7 +548,7 @@
     "imageWidth": 80.0,
     "imageHeight": 92.0,
     "sizeMultiplicator": 1.3,
-    "isTapable": false,
+    "isTappable": false,
     "anchor": "topLeft"
   },
   {
@@ -557,7 +557,7 @@
   },
   {
     "type": "AI",
-    "filename": "ekg_",
+    "fileName": "ekg_",
     "nbImage": 30,
     "loop": true,
     "x": 0.0,
@@ -568,18 +568,18 @@
     "imageHeight": 80.0,
     "modifiedWidth": 900.0,
     "modifiedHeight": 80.0,
-    "isTapable": false,
+    "isTappable": false,
     "anchor": "topLeft"
   },
   {
     "type": "SO",
-    "filename": "Ames_coeur_01",
+    "fileName": "Ames_coeur_01",
     "loop": false,
     "volume": 100
   },
   {
     "type": "SO",
-    "filename": "Diane_Bonjour",
+    "fileName": "Diane_Bonjour",
     "loop": false,
     "volume": 100
   },
@@ -589,7 +589,7 @@
   },
   {
     "type": "SO",
-    "filename": "Diane_Noir_total",
+    "fileName": "Diane_Noir_total",
     "loop": false,
     "volume": 100
   },
@@ -599,7 +599,7 @@
   },
   {
     "type": "SO",
-    "filename": "Diane_Message_scan",
+    "fileName": "Diane_Message_scan",
     "loop": false,
     "volume": 100
   },
