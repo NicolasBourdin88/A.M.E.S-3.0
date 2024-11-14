@@ -3,8 +3,18 @@ package com.ames.fr.data.model
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Event(
+data class RawEvent(
     val type: TypeEvent,
+    val fileName: String? = null,
+    val text: String? = null,
+    val x: Float? = null,
+    val y: Float? = null,
+    val originWidth: Float? = null,
+    val originHeight: Float? = null,
+    val anchor: String? = null,
+    val isTappable: Boolean? = null,
+    val eventName: String? = null,
+    val duration: Int? = null,
 )
 
 @Serializable
