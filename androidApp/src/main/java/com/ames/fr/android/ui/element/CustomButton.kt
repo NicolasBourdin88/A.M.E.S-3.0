@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.ames.fr.data.model.Event
@@ -45,14 +44,5 @@ fun CustomButton(event: Event, onClick: () -> Unit) {
                 }
                 else Modifier
             ),
-    )
-}
-
-@Composable
-fun drawableResourceId(name: String): Int {
-    return LocalContext.current.resources.getIdentifier(
-        name,
-        "drawable",
-        LocalContext.current.packageName
     )
 }
