@@ -27,7 +27,7 @@
   },
   {
     "type": "SO",
-    "fileName": "Ames_musique_intro",
+    "fileName": "ames_musique_intro",
     "loop": false,
     "volume": 100
   },
@@ -71,7 +71,7 @@
   },
   {
     "type": "SO",
-    "fileName": "Ames_text_beep",
+    "fileName": "ames_text_beep",
     "loop": false,
     "volume": 100
   },
@@ -97,7 +97,7 @@
   },
   {
     "type": "SO",
-    "fileName": "Ames_text_beep",
+    "fileName": "ames_text_beep",
     "loop": false,
     "volume": 100
   },
@@ -127,7 +127,7 @@
   },
   {
     "type": "SO",
-    "fileName": "Ames_text_beep",
+    "fileName": "mes_text_beep",
     "loop": false,
     "volume": 100
   },
@@ -187,7 +187,7 @@
   },
   {
     "type": "SO",
-    "fileName": "Ames_text_beep",
+    "fileName": "ames_text_beep",
     "loop": false,
     "volume": 100
   },
@@ -247,7 +247,7 @@
   },
   {
     "type": "SO",
-    "fileName": "Ames_text_beep",
+    "fileName": "ames_text_beep",
     "loop": false,
     "volume": 100
   },
@@ -287,7 +287,7 @@
   },
   {
     "type": "SO",
-    "fileName": "Ames_scan_empreinte",
+    "fileName": "ames_scan_empreinte",
     "loop": false,
     "volume": 100
   },
@@ -328,7 +328,7 @@
   },
   {
     "type": "SO",
-    "fileName": "Ames_sonnerie",
+    "fileName": "ames_sonnerie",
     "loop": true,
     "volume": 100
   },
@@ -392,7 +392,7 @@
   },
   {
     "type": "SO",
-    "fileName": "Ames_bruit",
+    "fileName": "ames_bruit",
     "loop": false,
     "volume": 100
   },
@@ -426,7 +426,7 @@
   },
   {
     "type": "SO",
-    "fileName": "Ames_Bruit_de_fonctionnement",
+    "fileName": "ames_bruit_de_fonctionnement",
     "loop": false,
     "volume": 100
   },
@@ -436,7 +436,7 @@
   },
   {
     "type": "SO",
-    "fileName": "Ames_affichage_grille",
+    "fileName": "ames_affichage_grille",
     "loop": false,
     "volume": 100
   },
@@ -577,23 +577,13 @@
   },
   {
     "type": "SO",
-    "fileName": "Ames_coeur_01",
+    "fileName": "ames_coeur_01",
     "loop": false,
     "volume": 100
   },
   {
     "type": "SO",
-    "fileName": "Diane_Bonjour",
-    "loop": false,
-    "volume": 100
-  },
-  {
-    "type": "WA",
-    "duration": 1
-  },
-  {
-    "type": "SO",
-    "fileName": "Diane_Noir_total",
+    "fileName": "diane_bonjour",
     "loop": false,
     "volume": 100
   },
@@ -603,7 +593,17 @@
   },
   {
     "type": "SO",
-    "fileName": "Diane_Message_scan",
+    "fileName": "diane_noir_total",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "WA",
+    "duration": 1
+  },
+  {
+    "type": "SO",
+    "fileName": "diane_message_scan",
     "loop": false,
     "volume": 100
   },
