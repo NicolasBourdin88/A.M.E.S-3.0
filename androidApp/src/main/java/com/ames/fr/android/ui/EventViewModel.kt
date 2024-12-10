@@ -34,7 +34,8 @@ class EventViewModel @Inject constructor(
     fun showNextEvents() {
         viewModelScope.launch(Dispatchers.IO) {
             val eventsToRemove = mutableListOf<Event>()
-            for (event in remainingEvents) {
+            val remainingEventsTemp = remainingEvents.toList()
+            for (event in remainingEventsTemp) {
                 eventsToRemove.add(event)
 
                 when (event.type) {

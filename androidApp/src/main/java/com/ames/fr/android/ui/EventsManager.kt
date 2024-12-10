@@ -1,5 +1,6 @@
 package com.ames.fr.android.ui
 
+import android.content.res.AssetManager
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -12,11 +13,12 @@ import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.ames.fr.android.ui.element.CustomAnimation
 import com.ames.fr.android.ui.element.CustomButton
+import com.ames.fr.android.ui.element.CustomSound
 import com.ames.fr.android.ui.element.CustomText
 import com.ames.fr.data.model.TypeEvent
 
 @Composable
-fun EventsManager(eventViewModel: EventViewModel = hiltViewModel()) {
+fun EventsManager(assets: AssetManager, eventViewModel: EventViewModel = hiltViewModel()) {
     val isOnClickContinueEnabled = remember { mutableStateOf(false) }
     val eventsToDisplay by eventViewModel.eventsToDisplayFlow.collectAsState(initial = emptyList())
 
@@ -29,16 +31,12 @@ fun EventsManager(eventViewModel: EventViewModel = hiltViewModel()) {
         Modifier
     }
 
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .then(clickableModifier)
-    ) {
+    Box(modifier = Modifier.fillMaxSize().then(clickableModifier)) {
         eventsToDisplay.forEach { event ->
             when (event.type) {
                 TypeEvent.SP -> CustomButton(event, onClick = { eventViewModel.showNextEvents() })
                 TypeEvent.TC -> CustomText(event)
-                TypeEvent.SO -> {}
+                TypeEvent.SO -> CustomSound(event, assets)
                 TypeEvent.AI -> CustomAnimation(event)
                 TypeEvent.GM -> isOnClickContinueEnabled.value = true
                 TypeEvent.AT -> CustomText(event, isAnimated = true)
