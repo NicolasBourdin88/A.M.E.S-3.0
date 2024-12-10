@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.ames.fr.android.ui.element.CustomAnimation
 import com.ames.fr.android.ui.element.CustomButton
+import com.ames.fr.android.ui.element.CustomSound
 import com.ames.fr.android.ui.element.CustomText
 import com.ames.fr.data.model.TypeEvent
 
@@ -38,7 +39,7 @@ fun EventsManager(eventViewModel: EventViewModel = hiltViewModel()) {
             when (event.type) {
                 TypeEvent.SP -> CustomButton(event, onClick = { eventViewModel.showNextEvents() })
                 TypeEvent.TC -> CustomText(event)
-                TypeEvent.SO -> {}
+                TypeEvent.SO -> CustomSound(event)
                 TypeEvent.AI -> CustomAnimation(event)
                 TypeEvent.GM -> isOnClickContinueEnabled.value = true
                 TypeEvent.AT -> CustomText(event, isAnimated = true)
