@@ -15,7 +15,9 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import com.ames.fr.android.ui.EventsManager
 import com.ames.fr.android.ui.theme.MyApplicationTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,11 +27,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             SetFullScreen()
             MyApplicationTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = Color.Black,
-                ) {
-                    EventsManager(resources)
+                Surface(modifier = Modifier.fillMaxSize(), color = Color.Black) {
+                    EventsManager()
                 }
             }
         }

@@ -43,7 +43,7 @@
   },
   {
     "type": "WA",
-    "duration": 3
+    "duration": 1
   },
   {
     "type": "AI",
@@ -63,7 +63,7 @@
   },
   {
     "type": "WA",
-    "duration": 3
+    "duration": 1
   },
   {
     "type": "GM",
@@ -85,7 +85,7 @@
     "color": "white",
     "duration": 0,
     "anchor": "topLeft",
-    "printSpeed": 0.05,
+    "printSpeed": 0.01,
     "isTappable": false
   },
   {
@@ -111,7 +111,7 @@
     "color": "white",
     "duration": 5,
     "anchor": "topLeft",
-    "printSpeed": 0.05,
+    "printSpeed": 0.01,
     "isTappable": false
   },
   {
@@ -141,12 +141,12 @@
     "color": "white",
     "duration": 5,
     "anchor": "topLeft",
-    "printSpeed": 0.05,
+    "printSpeed": 0.01,
     "isTappable": false
   },
   {
     "type": "WA",
-    "duration": 10
+    "duration": 1
   },
   {
     "eventName": "yesButton",
@@ -201,12 +201,12 @@
     "color": "white",
     "duration": 5,
     "anchor": "topLeft",
-    "printSpeed": 0.05,
+    "printSpeed": 0.01,
     "isTappable": false
   },
   {
     "type": "WA",
-    "duration": 8
+    "duration": 1
   },
   {
     "eventName": "yesButton2",
@@ -260,12 +260,12 @@
     "color": "white",
     "duration": 5,
     "anchor": "topLeft",
-    "printSpeed": 0.05,
+    "printSpeed": 0.01,
     "isTappable": false
   },
   {
     "type": "WA",
-    "duration": 12
+    "duration": 1
   },
   {
     "eventName": "scanButton",
@@ -321,7 +321,7 @@
   },
   {
     "type": "WA",
-    "duration": 5
+    "duration": 1
   },
   {
     "type": "RMA"
@@ -398,7 +398,7 @@
   },
   {
     "type": "WA",
-    "duration": 4
+    "duration": 1
   },
   {
     "type": "RM",
@@ -422,7 +422,7 @@
   },
   {
     "type": "WA",
-    "duration": 5
+    "duration": 1
   },
   {
     "type": "SO",
@@ -432,7 +432,7 @@
   },
   {
     "type": "WA",
-    "duration": 2
+    "duration": 1
   },
   {
     "type": "SO",
@@ -458,7 +458,7 @@
   },
   {
     "type": "WA",
-    "duration": 3
+    "duration": 1
   },
   {
     "type": "RMA"
@@ -557,7 +557,7 @@
   },
   {
     "type": "WA",
-    "duration": 3
+    "duration": 1
   },
   {
     "type": "AI",
@@ -589,7 +589,7 @@
   },
   {
     "type": "WA",
-    "duration": 8
+    "duration": 1
   },
   {
     "type": "SO",
@@ -599,7 +599,7 @@
   },
   {
     "type": "WA",
-    "duration": 21
+    "duration": 1
   },
   {
     "type": "SO",
@@ -609,7 +609,7 @@
   },
   {
     "type": "WA",
-    "duration": 47
+    "duration": 1
   },
   {
     "type": "TL",
