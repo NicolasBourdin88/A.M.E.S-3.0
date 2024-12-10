@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
             SetFullScreen()
             MyApplicationTheme {
                 Surface(modifier = Modifier.fillMaxSize(), color = Color.Black) {
-                    EventsManager()
+                    EventsManager(assets)
                 }
             }
         }

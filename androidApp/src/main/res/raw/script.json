@@ -127,7 +127,7 @@
   },
   {
     "type": "SO",
-    "fileName": "mes_text_beep",
+    "fileName": "ames_text_beep",
     "loop": false,
     "volume": 100
   },
