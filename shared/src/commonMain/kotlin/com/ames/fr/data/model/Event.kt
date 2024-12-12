@@ -16,6 +16,10 @@ data class Event(
     val nbImage: Int? = null,
     val x: Float? = null,
     val y: Float? = null,
+    val xBegin: Float? = null,
+    val yBegin: Float? = null,
+    val xEnd: Float? = null,
+    val yEnd: Float? = null,
     val originWidth: Float? = null,
     val originHeight: Float? = null,
     val anchor: String? = null,
@@ -31,7 +35,18 @@ data class Event(
     val imageHeight: Float? = null,
     val modifiedWidth: Float? = null,
     val modifiedHeight: Float? = null,
+    val animationSpeed: Float? = null,
+    val contentScale: ContentScale? = null,
 )
+
+@Serializable
+enum class ContentScale {
+    @SerialName("fullScreen")
+    FULL_SCREEN,
+
+    @SerialName("imageSize")
+    IMAGE_SIZE
+}
 
 @Serializable
 enum class TypeEvent {
@@ -46,7 +61,6 @@ enum class TypeEvent {
     RM,
     AT,
     MI,
-    STS,
     CA,
     DT,
     TL,
