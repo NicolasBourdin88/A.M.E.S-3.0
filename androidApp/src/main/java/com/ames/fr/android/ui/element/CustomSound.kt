@@ -23,7 +23,7 @@ fun CustomSound(event: Event, assets: AssetManager) {
             descriptor.length
         )
         descriptor.close()
-
+        mediaPlayer.isLooping = event.isLoop!!
         mediaPlayer.prepare()
         mediaPlayer.start()
     }
