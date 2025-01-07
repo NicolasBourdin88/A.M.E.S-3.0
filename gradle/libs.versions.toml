@@ -1,5 +1,6 @@
 [versions]
 accompanistDrawablepainter = "0.36.0"
+accompanistPermissions = "0.33.0-alpha"
 agp = "8.7.1"
 camera = "1.5.0-alpha04"
 coilCompose = "3.0.2"
@@ -16,6 +17,7 @@ hilt = "2.52"
 
 [libraries]
 accompanist-drawablepainter = { module = "com.google.accompanist:accompanist-drawablepainter", version.ref = "accompanistDrawablepainter" }
+accompanist-permissions = { module = "com.google.accompanist:accompanist-permissions", version.ref = "accompanistPermissions" }
 androidx-camera-camera2 = { module = "androidx.camera:camera-camera2", version.ref = "camera" }
 androidx-camera-core = { module = "androidx.camera:camera-core", version.ref = "camera" }
 androidx-camera-extensions = { module = "androidx.camera:camera-extensions", version.ref = "camera" }

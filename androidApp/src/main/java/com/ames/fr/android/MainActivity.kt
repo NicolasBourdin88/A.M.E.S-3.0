@@ -14,6 +14,7 @@ import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import com.ames.fr.android.ui.EventsManager
+import com.ames.fr.android.ui.element.RequestCameraPermission
 import com.ames.fr.android.ui.theme.MyApplicationTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -28,6 +29,7 @@ class MainActivity : ComponentActivity() {
             SetFullScreen()
             MyApplicationTheme {
                 Surface(modifier = Modifier.fillMaxSize(), color = Color.Black) {
+                    RequestCameraPermission()
                     EventsManager(assets)
                 }
             }
