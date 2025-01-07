@@ -4,16 +4,20 @@ import android.Manifest
 import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.camera.core.CameraControl
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.compose.LocalLifecycleOwner
-import com.ames.fr.data.model.Event
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.google.accompanist.permissions.isGranted
 import com.google.accompanist.permissions.rememberPermissionState
@@ -21,14 +25,18 @@ import kotlinx.coroutines.delay
 
 @OptIn(ExperimentalPermissionsApi::class)
 @Composable
-fun CustomCamera(event: Event) {
+fun CustomCamera(isTorchLightEnabled: Boolean) {
     val cameraPermissionState = rememberPermissionState(Manifest.permission.CAMERA)
-    if (cameraPermissionState.status.isGranted) CameraPreview()
+    if (cameraPermissionState.status.isGranted) CameraPreview(isTorchLightEnabled)
 }
 
 @Composable
-fun CameraPreview() {
+fun CameraPreview(isTorchLightEnabled: Boolean) {
     val lifecycleOwner = LocalLifecycleOwner.current
+
+    var cameraControl by remember { mutableStateOf<CameraControl?>(null) }
+
+    LaunchedEffect(isTorchLightEnabled) { cameraControl?.enableTorch(isTorchLightEnabled) }
 
     AndroidView(
         factory = { context ->
@@ -47,7 +55,12 @@ fun CameraPreview() {
 
                 try {
                     cameraProvider.unbindAll()
-                    cameraProvider.bindToLifecycle(lifecycleOwner, cameraSelector, preview)
+                    val camera = cameraProvider.bindToLifecycle(
+                        lifecycleOwner,
+                        cameraSelector,
+                        preview
+                    )
+                    cameraControl = camera.cameraControl
                 } catch (e: Exception) {
                     e.printStackTrace()
                 }
