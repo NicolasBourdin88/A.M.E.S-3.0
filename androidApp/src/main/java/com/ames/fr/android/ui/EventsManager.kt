@@ -13,9 +13,11 @@ import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.ames.fr.android.ui.element.CustomAnimation
 import com.ames.fr.android.ui.element.CustomButton
+import com.ames.fr.android.ui.element.CustomCamera
 import com.ames.fr.android.ui.element.CustomMovingImage
 import com.ames.fr.android.ui.element.CustomSound
 import com.ames.fr.android.ui.element.CustomText
+import com.ames.fr.data.model.Event
 import com.ames.fr.data.model.TypeEvent
 
 @Composable
@@ -32,9 +34,14 @@ fun EventsManager(assets: AssetManager, eventViewModel: EventViewModel = hiltVie
         Modifier
     }
 
-    Box(modifier = Modifier.fillMaxSize().then(clickableModifier)) {
-        eventsToDisplay.forEach { event ->
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .then(clickableModifier)
+    ) {
+        eventsToDisplay.sortEvents().forEach { event ->
             when (event.type) {
+                TypeEvent.CA -> CustomCamera(event)
                 TypeEvent.SP -> CustomButton(event, onClick = { eventViewModel.showNextEvents() })
                 TypeEvent.TC -> CustomText(event)
                 TypeEvent.SO -> CustomSound(event, assets)
@@ -42,11 +49,16 @@ fun EventsManager(assets: AssetManager, eventViewModel: EventViewModel = hiltVie
                 TypeEvent.GM -> isOnClickContinueEnabled.value = true
                 TypeEvent.AT -> CustomText(event, isAnimated = true)
                 TypeEvent.MI -> CustomMovingImage(event)
-                TypeEvent.CA -> {}
                 TypeEvent.DT -> {}
                 TypeEvent.TL -> {}
                 else -> {}
             }
         }
+    }
+}
+
+private fun List<Event>.sortEvents(): List<Event> {
+    return this.sortedBy { event ->
+        if (event.type == TypeEvent.CA) 0 else 1
     }
 }
