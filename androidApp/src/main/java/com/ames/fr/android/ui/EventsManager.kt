@@ -14,6 +14,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.ames.fr.android.ui.element.CustomAnimation
 import com.ames.fr.android.ui.element.CustomButton
 import com.ames.fr.android.ui.element.CustomCamera
+import com.ames.fr.android.ui.element.CustomDateTime
 import com.ames.fr.android.ui.element.CustomMovingImage
 import com.ames.fr.android.ui.element.CustomSound
 import com.ames.fr.android.ui.element.CustomText
@@ -50,7 +51,7 @@ fun EventsManager(assets: AssetManager, eventViewModel: EventViewModel = hiltVie
                 TypeEvent.GM -> isOnClickContinueEnabled.value = true
                 TypeEvent.AT -> CustomText(event, isAnimated = true)
                 TypeEvent.MI -> CustomMovingImage(event)
-                TypeEvent.DT -> {}
+                TypeEvent.DT -> CustomDateTime(event)
                 TypeEvent.TL -> isTorchLightEnabled.value = event.isTorchLightActivated == true
                 else -> {}
             }
