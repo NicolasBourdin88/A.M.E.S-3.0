@@ -37,6 +37,8 @@ data class Event(
     val modifiedHeight: Float? = null,
     val animationSpeed: Float? = null,
     val contentScale: ContentScale? = null,
+    @SerialName("activate")
+    val isTorchLightActivated: Boolean? = null,
 )
 
 @Serializable

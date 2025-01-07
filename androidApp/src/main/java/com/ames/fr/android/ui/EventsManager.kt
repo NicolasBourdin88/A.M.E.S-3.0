@@ -23,6 +23,7 @@ import com.ames.fr.data.model.TypeEvent
 @Composable
 fun EventsManager(assets: AssetManager, eventViewModel: EventViewModel = hiltViewModel()) {
     val isOnClickContinueEnabled = remember { mutableStateOf(false) }
+    val isTorchLightEnabled = remember { mutableStateOf(false) }
     val eventsToDisplay by eventViewModel.eventsToDisplayFlow.collectAsState(initial = emptyList())
 
     val clickableModifier = if (isOnClickContinueEnabled.value) {
@@ -41,7 +42,7 @@ fun EventsManager(assets: AssetManager, eventViewModel: EventViewModel = hiltVie
     ) {
         eventsToDisplay.sortEvents().forEach { event ->
             when (event.type) {
-                TypeEvent.CA -> CustomCamera(event)
+                TypeEvent.CA -> CustomCamera(isTorchLightEnabled.value)
                 TypeEvent.SP -> CustomButton(event, onClick = { eventViewModel.showNextEvents() })
                 TypeEvent.TC -> CustomText(event)
                 TypeEvent.SO -> CustomSound(event, assets)
@@ -50,7 +51,7 @@ fun EventsManager(assets: AssetManager, eventViewModel: EventViewModel = hiltVie
                 TypeEvent.AT -> CustomText(event, isAnimated = true)
                 TypeEvent.MI -> CustomMovingImage(event)
                 TypeEvent.DT -> {}
-                TypeEvent.TL -> {}
+                TypeEvent.TL -> isTorchLightEnabled.value = event.isTorchLightActivated == true
                 else -> {}
             }
         }
