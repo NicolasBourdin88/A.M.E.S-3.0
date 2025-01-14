@@ -620,10 +620,683 @@
   },
   {
     "type": "TL",
-    "type": "TL",
     "activate": true
   },
   {
     "type": "SR"
+  },
+  {
+    "type": "SC",
+    "eventName": "scanLounge",
+    "dumParamter": true,
+    "duration": 0
+  },
+  {
+    "type": "AI",
+    "eventName": "animationScannerPiece",
+    "nbImage": 95,
+    "fileName": "scanPiece",
+    "x": 0.5,
+    "y": 0.5,
+    "loop": false,
+    "duration": 5,
+    "imageWidth": 1,
+    "imageHeight": 1
+  },
+  {
+    "type": "RM",
+    "eventName": "animationScannerPiece"
+  },
+  {
+    "type": "SO",
+    "eventName": "scanSound",
+    "fileName": "Ames_scan_pièce",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "SO",
+    "eventName": "animationScannerApparition",
+    "fileName": "Ames_apparition_01",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "SO",
+    "eventName": "whisper",
+    "fileName": "Ames_rire_01",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "SO",
+    "eventName": "laugh1",
+    "fileName": "Ames_rire_01",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "RM",
+    "eventName": "laugh"
+  },
+  {
+    "type": "SO",
+    "eventName": "heartbeat2",
+    "fileName": "Ames_coeur_02",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "AI",
+    "eventName": "ekg",
+    "fileName": "ekg",
+    "nbImage": 30,
+    "x": 0.5,
+    "y": 0.1,
+    "loop": false,
+    "duration": 1,
+    "imageWidth": 1,
+    "imageHeight": 1
+  },
+  {
+    "type": "TC",
+    "text": "Stress Status : 45/100",
+    "eventName": "stressDisplay",
+    "x": 0.1,
+    "y": 0.05,
+    "fontSize": 20.0,
+    "color": "white",
+    "anchor": "topLeft"
+  },
+  {
+    "type": "SO",
+    "eventName": "stayPut",
+    "fileName": "Diane_ne_bougez_plus",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "SO",
+    "eventName": "whisper2",
+    "fileName": "Ames_apparition_02",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "GH",
+    "eventName": "firstGhost",
+    "fileName": "ghost1",
+    "nbImage": 10,
+    "nbShoot": 0,
+    "movementDuration": 3,
+    "loop": false,
+    "toleranceX": 0.3,
+    "toleranceY": 0.3,
+    "ghostPhi": -30,
+    "ghostTeta": 0,
+    "ghostDistance": 0,
+    "speed": 0.05,
+    "updateRate": 1,
+    "translationX": 0.5,
+    "translationY": 0,
+    "translationZ": 0
+  },
+  {
+    "type": "SO",
+    "eventName": "ghostSound",
+    "fileName": "Ames_apparition_03",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "SO",
+    "eventName": "whisper3",
+    "fileName": "Ames_apparition_02",
+    "loop": false,
+    "volume": 100
+  },
+
+
+
+  {
+    "type": "GH",
+    "eventName": "firstGhost2",
+    "fileName": "ghost1",
+    "nbImage": 10,
+    "nbShoot": 0,
+    "movementDuration": 3,
+    "loop": false,
+    "toleranceX": 0.3,
+    "toleranceY": 0.3,
+    "ghostPhi": -30,
+    "ghostTeta": 0,
+    "ghostDistance": 0,
+    "speed": 0.05,
+    "updateRate": 1,
+    "translationX": 0.5,
+    "translationY": 0,
+    "translationZ": 0
+  },
+  {
+    "type": "SO",
+    "eventName": "ghostSound",
+    "fileName": "Ames_apparition_03",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "RM",
+    "eventName": "heartbeat2"
+  },
+  {
+    "type": "SO",
+    "eventName": "fasterHeartbeatSound",
+    "fileName": "Ames_coeur_02",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "TC",
+    "text": "Stress Status : 65/100",
+    "eventName": "stressDisplay",
+    "x": 0.1,
+    "y": 0.05,
+    "fontSize": 20.0,
+    "color": "white",
+    "anchor": "topLeft"
+  },
+  {
+    "type": "AI",
+    "eventName": "ekg",
+    "fileName": "ekg",
+    "nbImage": 30,
+    "x": 0.5,
+    "y": 0.1,
+    "loop": false,
+    "duration": 1,
+    "imageWidth": 1,
+    "imageHeight": 1
+  },
+  {
+    "type": "SO",
+    "eventName": "dianeExplicationsPersistences",
+    "fileName": "Diane_Scan_Cuisine",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "SC",
+    "eventName": "scanCuisine",
+    "dumParamter": true,
+    "duration": 0
+  },
+  {
+    "type": "SO",
+    "eventName": "scanSound",
+    "fileName": "Ames_scan_pièce",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "AI",
+    "eventName": "animationScannerPiece2",
+    "nbImage": 95,
+    "fileName": "scanPiece",
+    "x": 0.5,
+    "y": 0.5,
+    "loop": false,
+    "duration": 5,
+    "imageWidth": 1,
+    "imageHeight": 1
+  },
+  {
+    "type": "RM",
+    "eventName": "animationScannerPiece2"
+  },
+  {
+    "type": "SO",
+    "eventName": "childLaugh",
+    "fileName": "Ames_rire_02",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "RM",
+    "eventName": "childLaugh"
+  },
+  {
+    "type": "SO",
+    "eventName": "muchFasterHeartbeatSound",
+    "fileName": "Ames_coeur_03",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "TC",
+    "text": "Stress Status : 85/100",
+    "eventName": "stressDisplay",
+    "x": 0.1,
+    "y": 0.05,
+    "fontSize": 20.0,
+    "color": "white",
+    "anchor": "topLeft"
+  },
+  {
+    "type": "AI",
+    "fileName": "ekg",
+    "nbImage": 30,
+    "loop": true,
+    "x": 0.5,
+    "y": 0.1,
+    "frameRate": 0.05,
+    "duration": 1,
+    "imageWidth": 950.0,
+    "imageHeight": 160.0,
+    "modifiedWidth": 900.0,
+    "modifiedHeight": 80.0,
+    "isTappable": false,
+    "anchor": "topLeft",
+    "contentScale": "imageSize"
+  },
+  {
+    "type": "SO",
+    "eventName": "strangeSounds",
+    "fileName": "Ames_couteau_poignarde",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "SO",
+    "eventName": "bePatient",
+    "fileName": "Diane_Presence_diffuse",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "SO",
+    "eventName": "newCry",
+    "fileName": "Ames_cri_01",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "TL",
+    "event": "flashGoingOut",
+    "activate": false
+  },
+  {
+    "type": "SO",
+    "eventName": "areYouOk",
+    "fileName": "Diane_Aller_trop_loin",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type":"GH",
+    "eventName":"kitchenGhost1",
+    "fileName": "T1",
+    "nbImage":9,
+    "nbShoot":1,
+    "animationDuration": 2,
+    "movementDuration": 3,
+    "loop": false,
+    "toleranceX": 0.3,
+    "toleranceY": 0.3,
+    "ghostPhi": 30,
+    "ghostTeta": 0,
+    "ghostDistance": 0,
+    "scaleFactor":2,
+    "speed":0.05,
+    "updateRate": 1
+  },
+  {
+    "type":"SO",
+    "eventName":"ghostSound",
+    "fileName": "Ames_cri_02",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type":"GH",
+    "eventName":"kitchenGhost2",
+    "fileName": "T2",
+    "nbImage":6,
+    "nbShoot":1,
+    "animationDuration": 2,
+    "movementDuration": 3,
+    "loop": false,
+    "toleranceX": 0.3,
+    "toleranceY": 0.3,
+    "ghostDistance": 0,
+    "scaleFactor":2,
+    "speed":0.05,
+    "updateRate": 1
+  },
+  {
+    "type":"SO",
+    "eventName":"ghostSound",
+    "fileName": "Ames_cri_02",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type":"GH",
+    "eventName":"kitchenGhost3",
+    "fileName": "T3",
+    "nbImage":7,
+    "nbShoot":1,
+    "animationDuration": 2,
+    "movementDuration": 3,
+    "loop": false,
+    "toleranceX": 0.3,
+    "toleranceY": 0.3,
+    "ghostDistance": 0,
+    "scaleFactor":2,
+    "speed":0.05,
+    "updateRate": 1
+  },
+  {
+    "type":"SO",
+    "eventName":"ghostSound",
+    "fileName": "Ames_cri_02",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type":"GH",
+    "eventName":"kitchenGhost4",
+    "fileName": "T4",
+    "nbImage":7,
+    "nbShoot":1,
+    "animationDuration": 2,
+    "movementDuration": 3,
+    "loop": false,
+    "toleranceX": 0.3,
+    "toleranceY": 0.3,
+    "ghostDistance": 0,
+    "scaleFactor":2,
+    "speed":0.05,
+    "updateRate": 1
+  },
+  {
+    "type":"SO",
+    "eventName":"ghostSound",
+    "fileName": "Ames_cri_02",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type":"GH",
+    "eventName":"kitchenGhost5",
+    "fileName": "T5",
+    "nbImage":7,
+    "nbShoot":1,
+    "animationDuration": 2,
+    "movementDuration": 3,
+    "loop": false,
+    "toleranceX": 0.3,
+    "toleranceY": 0.3,
+    "ghostDistance": 0,
+    "scaleFactor":2,
+    "speed":0.05,
+    "updateRate": 1
+  },
+  {
+    "type":"SO",
+    "eventName":"ghostSound",
+    "fileName": "Ames_cri_02",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type":"SO",
+    "eventName":"dianeScanSDB",
+    "fileName": "Diane_Scan_SDB",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type":"TL",
+    "activate": true
+  },
+  {
+    "type": "SC",
+    "eventName": "scanSDB",
+    "dumParamter": true,
+    "duration": 0
+  },
+  {
+    "type":"SO",
+    "eventName":"scanSound",
+    "fileName": "Ames_scan_piece",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type":"AI",
+    "eventName":"animationScanner",
+    "nbImage":95,
+    "screenFit":true,
+    "fileName":"scanPiece",
+    "x": 0.5,
+    "y": 0.5,
+    "nbRepeat":1,
+    "animationDuration":5,
+    "scaleFactor":1
+  },
+  {
+    "type":"RM",
+    "eventName":"animationScanner"
+  },
+  {
+    "type":"SO",
+    "eventName":"knife",
+    "fileName": "Ames_couteau_01",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type":"SO",
+    "eventName":"cries",
+    "fileName": "Ames_pleurs_01",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type":"SO",
+    "eventName":"brokenGlass",
+    "fileName": "Ames_verre_01",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type" : "SO",
+    "eventName": "laughs",
+    "fileName": "Ames_rire_03",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type" : "SO",
+    "eventName": "bedroomScan",
+    "fileName": "Diane_Scan_Chambre",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "SC",
+    "eventName": "bedroomScan",
+    "dumParamter": true
+  },
+  {
+    "type": "SO",
+    "eventName": "scanSound",
+    "fileName": "Ames_scan_piÃ¨ce",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "AI",
+    "eventName": "animationScanner",
+    "nbImage": 95,
+    "screenFit": true,
+    "fileName": "scanPiece",
+    "x": 0.5,
+    "y": 0.5,
+    "nbRepeat": 1,
+    "animationDuration": 5,
+    "scaleFactor": 1
+  },
+  {
+    "type": "RM",
+    "eventName": "animationScanner"
+  },
+  {
+    "type": "SO",
+    "eventName": "cries",
+    "fileName": "Ames_pleurs_01",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "SO",
+    "eventName": "bedSheets",
+    "fileName": "Diane_Drap",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "TL",
+    "eventName": "flashGoingOut",
+    "activate": false
+  },
+  {
+    "type": "SO",
+    "eventName": "weAlmostGotHer",
+    "fileName": "Diane_on_la_tient_presque",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "SO",
+    "eventName": "ghostSheetScream",
+    "fileName": "Ames_cri_02",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "GH",
+    "eventName": "ghostInBed",
+    "nbImage": 15,
+    "movementDuration": 2,
+    "fileName": "Bed",
+    "x": 0.5,
+    "y": 0.5,
+    "nbRepeat": 0,
+    "animationDuration": 2,
+    "scaleFactor": 6
+  },
+  {
+    "type": "RM",
+    "eventName": "ghostInBed"
+  },
+  {
+    "type": "SO",
+    "eventName": "outAim",
+    "fileName": "Diane_Scan_plafond",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "GH",
+    "eventName": "ceilingGhost",
+    "nbImage": 17,
+    "nbShoot": 1,
+    "fileName": "Ceil",
+    "animationDuration": 2,
+    "movementDuration": 10,
+    "loop": false,
+    "toleranceX": 0.3,
+    "toleranceY": 0.3,
+    "ghostTeta": 50,
+    "ghostPhi": 0,
+    "ghostDistance": 0,
+    "scaleFactor": 2,
+    "speed": 0.05,
+    "updateRate": 1
+  },
+  {
+    "type": "SO",
+    "eventName": "ghostSound",
+    "fileName": "Ames_cri_01",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "TL",
+    "eventName": "flashGoingOn",
+    "activate": true
+  },
+  {
+    "type": "SO",
+    "eventName": "ending",
+    "fileName": "Diane_Fin_email",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "RM",
+    "eventName": "scanLounge"
+  },
+  {
+    "type": "RM",
+    "eventName": "retina"
+  },
+  {
+    "type": "RM",
+    "eventName": "ekg"
+  },
+  {
+    "type": "RM",
+    "eventName": "batteryTest"
+  },
+  {
+    "type": "RM",
+    "eventName": "hourDisplay"
+  },
+  {
+    "type": "RM",
+    "eventName": "stressDisplay"
+  },
+  {
+    "type": "RM",
+    "eventName": "grid"
+  },
+  {
+    "type": "RM",
+    "eventName": "backgroundAnimation"
+  },
+  {
+    "type": "CA",
+    "eventName": "finalCameraOff",
+    "activate": false
+  },
+  {
+    "type": "RM",
+    "eventName": "amesSound"
+  },
+  {
+    "type": "SP",
+    "eventName": "imageMail",
+    "fileName": "mail",
+    "x": 0.5,
+    "y": 0.5
+  },
+  {
+    "type": "SP",
+    "eventName": "imageFin",
+    "fileName": "gameOver",
+    "x": 0.5,
+    "y": 0.5
   }
 ]
