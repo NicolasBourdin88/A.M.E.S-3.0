@@ -52,18 +52,19 @@ enum class ContentScale {
 
 @Serializable
 enum class TypeEvent {
-    SP,
-    TC,
-    SR,
-    RMA,
-    SO,
-    AI,
-    WA,
-    GM,
-    RM,
-    AT,
-    MI,
-    CA,
-    DT,
-    TL,
+    SP,//clickable image
+    TC,//text
+    SR,//stop read
+    RMA,//remove all
+    SO,//soung
+    AI,//animation
+    WA,//wait
+    GM,//gamemode
+    RM,//remove
+    AT,//animated text
+    MI,//move image
+    CA,//camera
+    DT,//date time
+    TL,//torch light
 }
+
