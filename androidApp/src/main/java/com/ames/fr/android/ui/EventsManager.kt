@@ -18,6 +18,7 @@ import com.ames.fr.android.ui.element.CustomDateTime
 import com.ames.fr.android.ui.element.CustomMovingImage
 import com.ames.fr.android.ui.element.CustomSound
 import com.ames.fr.android.ui.element.CustomText
+import com.ames.fr.android.ui.element.Scan
 import com.ames.fr.data.model.Event
 import com.ames.fr.data.model.TypeEvent
 
@@ -53,6 +54,7 @@ fun EventsManager(assets: AssetManager, eventViewModel: EventViewModel = hiltVie
                 TypeEvent.MI -> CustomMovingImage(event)
                 TypeEvent.DT -> CustomDateTime(event)
                 TypeEvent.TL -> isTorchLightEnabled.value = event.isTorchLightActivated == true
+                TypeEvent.SC -> Scan(onClick = { eventViewModel.showNextEvents() })
                 else -> {}
             }
         }

@@ -25,7 +25,7 @@ data class Event(
     val anchor: String? = null,
     val isTappable: Boolean? = null,
     val eventName: String? = null,
-    val duration: Int? = null,
+    val duration: Float? = null,
     val fontSize: Float? = null,
     val printSpeed: Float? = null,
     @SerialName("loop")
@@ -52,19 +52,20 @@ enum class ContentScale {
 
 @Serializable
 enum class TypeEvent {
-    SP,//clickable image
-    TC,//text
-    SR,//stop read
-    RMA,//remove all
-    SO,//soung
-    AI,//animation
-    WA,//wait
-    GM,//gamemode
-    RM,//remove
-    AT,//animated text
-    MI,//move image
-    CA,//camera
-    DT,//date time
-    TL,//torch light
+    SP,     // clickableImage
+    TC,     // text
+    SR,     // stopRead
+    RMA,    // removeAll
+    SO,     // sound
+    AI,     // animation
+    WA,     // wait
+    GM,     // gameMode
+    RM,     // remove
+    AT,     // animatedText
+    MI,     // move image
+    CA,     // camera
+    DT,     // dateTime
+    TL,     // torchLight
+    SC,     // scan
+    GH,     // ghost
 }
-
