@@ -269,9 +269,9 @@
     "duration": 1
   },
   {
-    "eventName": "scanButton",
     "type": "SP",
-    "fileName": "scan_button",
+    "eventName": "fingerPrintButton",
+    "fileName": "fingerprint_button",
     "x": 0.7,
     "y": 0.30,
     "originWidth": 79.0,
@@ -284,7 +284,7 @@
   },
   {
     "type": "RM",
-    "eventName": "scanButton"
+    "eventName": "fingerPrintButton"
   },
   {
     "type": "SO",
@@ -535,6 +535,7 @@
   {
     "type": "TC",
     "text": "Stress Status : 25/100",
+    "eventName": "stressDisplay",
     "x": 0.1,
     "y": 0.05,
     "fontSize": 20.0,
@@ -568,6 +569,7 @@
   {
     "type": "AI",
     "fileName": "ekg",
+    "eventName": "ekg",
     "nbImage": 30,
     "loop": true,
     "x": 0.0,
@@ -623,7 +625,8 @@
     "activate": true
   },
   {
-    "type": "SR"
+    "type": "WA",
+    "duration": 1
   },
   {
     "type": "SC",
@@ -632,76 +635,106 @@
     "duration": 0
   },
   {
+    "type": "SR"
+  },
+  {
     "type": "AI",
     "eventName": "animationScannerPiece",
     "nbImage": 95,
-    "fileName": "scanPiece",
-    "x": 0.5,
-    "y": 0.5,
+    "fileName": "scan_room",
+    "x": 0,
+    "y": 0,
     "loop": false,
     "duration": 5,
     "imageWidth": 1,
-    "imageHeight": 1
+    "imageHeight": 1,
+    "contentScale": "fullScreen",
+    "frameRate": 0.05
+  },
+  {
+    "type": "SO",
+    "eventName": "scanSound",
+    "fileName": "scan_room",
+    "loop": false,
+    "volume": 100
+  },
+  {
+    "type": "WA",
+    "duration": 8
   },
   {
     "type": "RM",
     "eventName": "animationScannerPiece"
   },
   {
-    "type": "SO",
-    "eventName": "scanSound",
-    "fileName": "Ames_scan_pièce",
-    "loop": false,
-    "volume": 100
+    "type": "RM",
+    "eventName": "scanSound"
   },
   {
     "type": "SO",
     "eventName": "animationScannerApparition",
-    "fileName": "Ames_apparition_01",
+    "fileName": "ames_apparition_01",
     "loop": false,
     "volume": 100
   },
   {
-    "type": "SO",
-    "eventName": "whisper",
-    "fileName": "Ames_rire_01",
-    "loop": false,
-    "volume": 100
+    "type": "WA",
+    "duration": 2
+  },
+  {
+    "type": "RM",
+    "eventName": "animationScannerApparition"
   },
   {
     "type": "SO",
     "eventName": "laugh1",
-    "fileName": "Ames_rire_01",
+    "fileName": "laugh_01",
     "loop": false,
     "volume": 100
   },
   {
+    "type": "WA",
+    "duration": 4
+  },
+  {
     "type": "RM",
-    "eventName": "laugh"
+    "eventName": "laugh1"
   },
   {
     "type": "SO",
     "eventName": "heartbeat2",
-    "fileName": "Ames_coeur_02",
-    "loop": false,
+    "fileName": "heartbeat_02",
+    "loop": true,
     "volume": 100
   },
   {
+    "type": "RM",
+    "eventName": "ekg"
+  },
+  {
+    "_COMMENTAIRE": "MEME EKG MAIS PLUS RAPIDE (DURATION)",
     "type": "AI",
-    "eventName": "ekg",
+    "eventName": "ekg2",
     "fileName": "ekg",
     "nbImage": 30,
     "x": 0.5,
     "y": 0.1,
+    "frameRate": 0.5,
     "loop": false,
-    "duration": 1,
+    "duration": 0.8,
     "imageWidth": 1,
-    "imageHeight": 1
+    "imageHeight": 1,
+    "contentScale": "imageSize"
   },
   {
+    "type": "RM",
+    "eventName": "stressDisplay"
+  },
+  {
+    "_COMMENTAIRE": "MEME TC MAIS PLUS DE STRESS",
     "type": "TC",
     "text": "Stress Status : 45/100",
-    "eventName": "stressDisplay",
+    "eventName": "stressDisplay2",
     "x": 0.1,
     "y": 0.05,
     "fontSize": 20.0,
@@ -711,16 +744,24 @@
   {
     "type": "SO",
     "eventName": "stayPut",
-    "fileName": "Diane_ne_bougez_plus",
+    "fileName": "diane_no_move",
     "loop": false,
     "volume": 100
   },
   {
+    "type": "WA",
+    "duration": 13
+  },
+  {
     "type": "SO",
     "eventName": "whisper2",
-    "fileName": "Ames_apparition_02",
+    "fileName": "apparition_02",
     "loop": false,
     "volume": 100
+  },
+  {
+    "type": "WA",
+    "duration": 5
   },
   {
     "type": "GH",
@@ -744,20 +785,17 @@
   {
     "type": "SO",
     "eventName": "ghostSound",
-    "fileName": "Ames_apparition_03",
+    "fileName": "apparition_03",
     "loop": false,
     "volume": 100
   },
   {
     "type": "SO",
     "eventName": "whisper3",
-    "fileName": "Ames_apparition_02",
+    "fileName": "apparition_02",
     "loop": false,
     "volume": 100
   },
-
-
-
   {
     "type": "GH",
     "eventName": "firstGhost2",
@@ -780,7 +818,7 @@
   {
     "type": "SO",
     "eventName": "ghostSound",
-    "fileName": "Ames_apparition_03",
+    "fileName": "apparition_03",
     "loop": false,
     "volume": 100
   },
@@ -791,7 +829,7 @@
   {
     "type": "SO",
     "eventName": "fasterHeartbeatSound",
-    "fileName": "Ames_coeur_02",
+    "fileName": "heartbeat_02",
     "loop": false,
     "volume": 100
   },
@@ -815,25 +853,30 @@
     "loop": false,
     "duration": 1,
     "imageWidth": 1,
-    "imageHeight": 1
+    "imageHeight": 1,
+    "contentScale": "imageSize",
+    "frameRate": 0.5
+  },
+  {
+    "type": "SR"
   },
   {
     "type": "SO",
     "eventName": "dianeExplicationsPersistences",
-    "fileName": "Diane_Scan_Cuisine",
+    "fileName": "diane_scan_cuisine",
     "loop": false,
     "volume": 100
   },
   {
     "type": "SC",
     "eventName": "scanCuisine",
-    "dumParamter": true,
+    "dumParameter": true,
     "duration": 0
   },
   {
     "type": "SO",
     "eventName": "scanSound",
-    "fileName": "Ames_scan_pièce",
+    "fileName": "scan_room",
     "loop": false,
     "volume": 100
   },
@@ -841,7 +884,7 @@
     "type": "AI",
     "eventName": "animationScannerPiece2",
     "nbImage": 95,
-    "fileName": "scanPiece",
+    "fileName": "scan_room",
     "x": 0.5,
     "y": 0.5,
     "loop": false,
@@ -856,7 +899,7 @@
   {
     "type": "SO",
     "eventName": "childLaugh",
-    "fileName": "Ames_rire_02",
+    "fileName": "laugh_02",
     "loop": false,
     "volume": 100
   },
@@ -867,7 +910,7 @@
   {
     "type": "SO",
     "eventName": "muchFasterHeartbeatSound",
-    "fileName": "Ames_coeur_03",
+    "fileName": "heartbeat_03",
     "loop": false,
     "volume": 100
   },
@@ -901,21 +944,21 @@
   {
     "type": "SO",
     "eventName": "strangeSounds",
-    "fileName": "Ames_couteau_poignarde",
+    "fileName": "knife_stabber",
     "loop": false,
     "volume": 100
   },
   {
     "type": "SO",
     "eventName": "bePatient",
-    "fileName": "Diane_Presence_diffuse",
+    "fileName": "diane_presence_diffuse",
     "loop": false,
     "volume": 100
   },
   {
     "type": "SO",
     "eventName": "newCry",
-    "fileName": "Ames_cri_01",
+    "fileName": "ames_cri_01",
     "loop": false,
     "volume": 100
   },
@@ -927,16 +970,16 @@
   {
     "type": "SO",
     "eventName": "areYouOk",
-    "fileName": "Diane_Aller_trop_loin",
+    "fileName": "diane_aller_trop_loin",
     "loop": false,
     "volume": 100
   },
   {
-    "type":"GH",
-    "eventName":"kitchenGhost1",
+    "type": "GH",
+    "eventName": "kitchenGhost1",
     "fileName": "T1",
-    "nbImage":9,
-    "nbShoot":1,
+    "nbImage": 9,
+    "nbShoot": 1,
     "animationDuration": 2,
     "movementDuration": 3,
     "loop": false,
@@ -945,181 +988,181 @@
     "ghostPhi": 30,
     "ghostTeta": 0,
     "ghostDistance": 0,
-    "scaleFactor":2,
-    "speed":0.05,
+    "scaleFactor": 2,
+    "speed": 0.05,
     "updateRate": 1
   },
   {
-    "type":"SO",
-    "eventName":"ghostSound",
-    "fileName": "Ames_cri_02",
+    "type": "SO",
+    "eventName": "ghostSound",
+    "fileName": "ames_cri_02",
     "loop": false,
     "volume": 100
   },
   {
-    "type":"GH",
-    "eventName":"kitchenGhost2",
+    "type": "GH",
+    "eventName": "kitchenGhost2",
     "fileName": "T2",
-    "nbImage":6,
-    "nbShoot":1,
+    "nbImage": 6,
+    "nbShoot": 1,
     "animationDuration": 2,
     "movementDuration": 3,
     "loop": false,
     "toleranceX": 0.3,
     "toleranceY": 0.3,
     "ghostDistance": 0,
-    "scaleFactor":2,
-    "speed":0.05,
+    "scaleFactor": 2,
+    "speed": 0.05,
     "updateRate": 1
   },
   {
-    "type":"SO",
-    "eventName":"ghostSound",
-    "fileName": "Ames_cri_02",
+    "type": "SO",
+    "eventName": "ghostSound",
+    "fileName": "ames_cri_02",
     "loop": false,
     "volume": 100
   },
   {
-    "type":"GH",
-    "eventName":"kitchenGhost3",
+    "type": "GH",
+    "eventName": "kitchenGhost3",
     "fileName": "T3",
-    "nbImage":7,
-    "nbShoot":1,
+    "nbImage": 7,
+    "nbShoot": 1,
     "animationDuration": 2,
     "movementDuration": 3,
     "loop": false,
     "toleranceX": 0.3,
     "toleranceY": 0.3,
     "ghostDistance": 0,
-    "scaleFactor":2,
-    "speed":0.05,
+    "scaleFactor": 2,
+    "speed": 0.05,
     "updateRate": 1
   },
   {
-    "type":"SO",
-    "eventName":"ghostSound",
-    "fileName": "Ames_cri_02",
+    "type": "SO",
+    "eventName": "ghostSound",
+    "fileName": "ames_cri_02",
     "loop": false,
     "volume": 100
   },
   {
-    "type":"GH",
-    "eventName":"kitchenGhost4",
+    "type": "GH",
+    "eventName": "kitchenGhost4",
     "fileName": "T4",
-    "nbImage":7,
-    "nbShoot":1,
+    "nbImage": 7,
+    "nbShoot": 1,
     "animationDuration": 2,
     "movementDuration": 3,
     "loop": false,
     "toleranceX": 0.3,
     "toleranceY": 0.3,
     "ghostDistance": 0,
-    "scaleFactor":2,
-    "speed":0.05,
+    "scaleFactor": 2,
+    "speed": 0.05,
     "updateRate": 1
   },
   {
-    "type":"SO",
-    "eventName":"ghostSound",
-    "fileName": "Ames_cri_02",
+    "type": "SO",
+    "eventName": "ghostSound",
+    "fileName": "ames_cri_02",
     "loop": false,
     "volume": 100
   },
   {
-    "type":"GH",
-    "eventName":"kitchenGhost5",
+    "type": "GH",
+    "eventName": "kitchenGhost5",
     "fileName": "T5",
-    "nbImage":7,
-    "nbShoot":1,
+    "nbImage": 7,
+    "nbShoot": 1,
     "animationDuration": 2,
     "movementDuration": 3,
     "loop": false,
     "toleranceX": 0.3,
     "toleranceY": 0.3,
     "ghostDistance": 0,
-    "scaleFactor":2,
-    "speed":0.05,
+    "scaleFactor": 2,
+    "speed": 0.05,
     "updateRate": 1
   },
   {
-    "type":"SO",
-    "eventName":"ghostSound",
-    "fileName": "Ames_cri_02",
+    "type": "SO",
+    "eventName": "ghostSound",
+    "fileName": "ames_cri_02",
     "loop": false,
     "volume": 100
   },
   {
-    "type":"SO",
-    "eventName":"dianeScanSDB",
-    "fileName": "Diane_Scan_SDB",
+    "type": "SO",
+    "eventName": "dianeScanSDB",
+    "fileName": "diane_scan_sdb",
     "loop": false,
     "volume": 100
   },
   {
-    "type":"TL",
+    "type": "TL",
     "activate": true
   },
   {
     "type": "SC",
     "eventName": "scanSDB",
-    "dumParamter": true,
+    "dumParameter": true,
     "duration": 0
   },
   {
-    "type":"SO",
-    "eventName":"scanSound",
-    "fileName": "Ames_scan_piece",
+    "type": "SO",
+    "eventName": "scanSound",
+    "fileName": "scan_room",
     "loop": false,
     "volume": 100
   },
   {
-    "type":"AI",
-    "eventName":"animationScanner",
-    "nbImage":95,
-    "screenFit":true,
-    "fileName":"scanPiece",
+    "type": "AI",
+    "eventName": "animationScanner",
+    "nbImage": 95,
+    "screenFit": true,
+    "fileName": "scan_room",
     "x": 0.5,
     "y": 0.5,
-    "nbRepeat":1,
-    "animationDuration":5,
-    "scaleFactor":1
+    "nbRepeat": 1,
+    "animationDuration": 5,
+    "scaleFactor": 1
   },
   {
-    "type":"RM",
-    "eventName":"animationScanner"
+    "type": "RM",
+    "eventName": "animationScanner"
   },
   {
-    "type":"SO",
-    "eventName":"knife",
-    "fileName": "Ames_couteau_01",
+    "type": "SO",
+    "eventName": "knife",
+    "fileName": "ames_couteau_01",
     "loop": false,
     "volume": 100
   },
   {
-    "type":"SO",
-    "eventName":"cries",
-    "fileName": "Ames_pleurs_01",
+    "type": "SO",
+    "eventName": "cries",
+    "fileName": "ames_pleurs_01",
     "loop": false,
     "volume": 100
   },
   {
-    "type":"SO",
-    "eventName":"brokenGlass",
-    "fileName": "Ames_verre_01",
+    "type": "SO",
+    "eventName": "brokenGlass",
+    "fileName": "ames_verre_01",
     "loop": false,
     "volume": 100
   },
   {
-    "type" : "SO",
+    "type": "SO",
     "eventName": "laughs",
-    "fileName": "Ames_rire_03",
+    "fileName": "laugh_01",
     "loop": false,
     "volume": 100
   },
   {
-    "type" : "SO",
+    "type": "SO",
     "eventName": "bedroomScan",
-    "fileName": "Diane_Scan_Chambre",
+    "fileName": "diane_scan_chambre",
     "loop": false,
     "volume": 100
   },
@@ -1131,7 +1174,7 @@
   {
     "type": "SO",
     "eventName": "scanSound",
-    "fileName": "Ames_scan_piÃ¨ce",
+    "fileName": "scan_room",
     "loop": false,
     "volume": 100
   },
@@ -1140,7 +1183,7 @@
     "eventName": "animationScanner",
     "nbImage": 95,
     "screenFit": true,
-    "fileName": "scanPiece",
+    "fileName": "scan_room",
     "x": 0.5,
     "y": 0.5,
     "nbRepeat": 1,
@@ -1154,14 +1197,14 @@
   {
     "type": "SO",
     "eventName": "cries",
-    "fileName": "Ames_pleurs_01",
+    "fileName": "ames_pleurs_01",
     "loop": false,
     "volume": 100
   },
   {
     "type": "SO",
     "eventName": "bedSheets",
-    "fileName": "Diane_Drap",
+    "fileName": "diane_drap",
     "loop": false,
     "volume": 100
   },
@@ -1173,14 +1216,14 @@
   {
     "type": "SO",
     "eventName": "weAlmostGotHer",
-    "fileName": "Diane_on_la_tient_presque",
+    "fileName": "diane_on_la_tient_presque",
     "loop": false,
     "volume": 100
   },
   {
     "type": "SO",
     "eventName": "ghostSheetScream",
-    "fileName": "Ames_cri_02",
+    "fileName": "ames_cri_02",
     "loop": false,
     "volume": 100
   },
@@ -1203,7 +1246,7 @@
   {
     "type": "SO",
     "eventName": "outAim",
-    "fileName": "Diane_Scan_plafond",
+    "fileName": "diane_scan_plafond",
     "loop": false,
     "volume": 100
   },
@@ -1228,7 +1271,7 @@
   {
     "type": "SO",
     "eventName": "ghostSound",
-    "fileName": "Ames_cri_01",
+    "fileName": "ames_cri_02",
     "loop": false,
     "volume": 100
   },
@@ -1240,62 +1283,34 @@
   {
     "type": "SO",
     "eventName": "ending",
-    "fileName": "Diane_Fin_email",
+    "fileName": "diane_fin_email",
     "loop": false,
     "volume": 100
   },
   {
-    "type": "RM",
-    "eventName": "scanLounge"
+    "type": "WA",
+    "duration": 10
   },
   {
-    "type": "RM",
-    "eventName": "retina"
-  },
-  {
-    "type": "RM",
-    "eventName": "ekg"
-  },
-  {
-    "type": "RM",
-    "eventName": "batteryTest"
-  },
-  {
-    "type": "RM",
-    "eventName": "hourDisplay"
-  },
-  {
-    "type": "RM",
-    "eventName": "stressDisplay"
-  },
-  {
-    "type": "RM",
-    "eventName": "grid"
-  },
-  {
-    "type": "RM",
-    "eventName": "backgroundAnimation"
-  },
-  {
-    "type": "CA",
-    "eventName": "finalCameraOff",
-    "activate": false
-  },
-  {
-    "type": "RM",
-    "eventName": "amesSound"
+    "type": "RMA"
   },
   {
     "type": "SP",
     "eventName": "imageMail",
     "fileName": "mail",
+    "originWidth": 150.0,
+    "originHeight": 92.0,
+    "isTappable": false,
     "x": 0.5,
     "y": 0.5
   },
   {
     "type": "SP",
     "eventName": "imageFin",
-    "fileName": "gameOver",
+    "fileName": "game_over",
+    "originWidth": 150.0,
+    "originHeight": 92.0,
+    "isTappable": false,
     "x": 0.5,
     "y": 0.5
   }

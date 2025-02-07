@@ -37,11 +37,7 @@ fun EventsManager(assets: AssetManager, eventViewModel: EventViewModel = hiltVie
         Modifier
     }
 
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .then(clickableModifier)
-    ) {
+    Box(modifier = Modifier.fillMaxSize().then(clickableModifier)) {
         eventsToDisplay.sortEvents().forEach { event ->
             when (event.type) {
                 TypeEvent.CA -> CustomCamera(isTorchLightEnabled.value)
