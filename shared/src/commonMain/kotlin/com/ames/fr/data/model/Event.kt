@@ -25,7 +25,7 @@ data class Event(
     val anchor: String? = null,
     val isTappable: Boolean? = null,
     val eventName: String? = null,
-    val duration: Float? = null,
+    var duration: Float? = null,
     val fontSize: Float? = null,
     val printSpeed: Float? = null,
     @SerialName("loop")
@@ -39,33 +39,35 @@ data class Event(
     val contentScale: ContentScale? = null,
     @SerialName("activate")
     val isTorchLightActivated: Boolean? = null,
-)
+) {
+    companion object {
+        @Serializable
+        enum class ContentScale {
+            @SerialName("fullScreen")
+            FULL_SCREEN,
 
-@Serializable
-enum class ContentScale {
-    @SerialName("fullScreen")
-    FULL_SCREEN,
+            @SerialName("imageSize")
+            IMAGE_SIZE
+        }
 
-    @SerialName("imageSize")
-    IMAGE_SIZE
-}
-
-@Serializable
-enum class TypeEvent {
-    SP,     // clickableImage
-    TC,     // text
-    SR,     // stopRead
-    RMA,    // removeAll
-    SO,     // sound
-    AI,     // animation
-    WA,     // wait
-    GM,     // gameMode
-    RM,     // remove
-    AT,     // animatedText
-    MI,     // move image
-    CA,     // camera
-    DT,     // dateTime
-    TL,     // torchLight
-    SC,     // scan
-    GH,     // ghost
+        @Serializable
+        enum class TypeEvent {
+            SP,     // clickableImage
+            TC,     // text
+            SR,     // stopRead
+            RMA,    // removeAll
+            SO,     // sound
+            AI,     // animation
+            WA,     // wait
+            GM,     // gameMode
+            RM,     // remove
+            AT,     // animatedText
+            MI,     // move image
+            CA,     // camera
+            DT,     // dateTime
+            TL,     // torchLight
+            SC,     // scan
+            GH,     // ghost
+        }
+    }
 }

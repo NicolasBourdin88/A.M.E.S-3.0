@@ -18,7 +18,7 @@ import androidx.core.content.ContextCompat.getDrawable
 import com.ames.fr.data.model.Event
 import com.google.accompanist.drawablepainter.rememberDrawablePainter
 import kotlinx.coroutines.delay
-import com.ames.fr.data.model.ContentScale as ContentScaleEvent
+import com.ames.fr.data.model.Event.Companion.ContentScale as ContentScaleEvent
 
 @Composable
 fun CustomAnimation(event: Event) {

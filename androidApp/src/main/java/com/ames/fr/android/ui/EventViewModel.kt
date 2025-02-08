@@ -7,7 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.ames.fr.android.R
 import com.ames.fr.data.ScriptManager
 import com.ames.fr.data.model.Event
-import com.ames.fr.data.model.TypeEvent
+import com.ames.fr.data.model.Event.Companion.TypeEvent
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
@@ -74,6 +74,14 @@ class EventViewModel @Inject constructor(
     private fun getAllEventsFromJson(resources: Resources): MutableList<Event> {
         val inputStream = resources.openRawResource(R.raw.script)
         val jsonString = inputStream.bufferedReader().use { it.readText() }
-        return ScriptManager.getEventList(jsonString).toMutableList()
+
+        val eventsList = ScriptManager.getEventList(jsonString).toMutableList()
+        if (IS_TEST) eventsList.map { it.duration = DURATION_TEST }
+        return eventsList
+    }
+
+    companion object {
+        const val IS_TEST = true
+        const val DURATION_TEST = 1.0F
     }
 }

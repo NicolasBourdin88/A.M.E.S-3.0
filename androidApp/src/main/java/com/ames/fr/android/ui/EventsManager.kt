@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
@@ -20,8 +21,10 @@ import com.ames.fr.android.ui.element.CustomSound
 import com.ames.fr.android.ui.element.CustomText
 import com.ames.fr.android.ui.element.Scan
 import com.ames.fr.data.model.Event
-import com.ames.fr.data.model.TypeEvent
+import com.ames.fr.data.model.Event.Companion.TypeEvent
+import kotlin.uuid.ExperimentalUuidApi
 
+@OptIn(ExperimentalUuidApi::class)
 @Composable
 fun EventsManager(assets: AssetManager, eventViewModel: EventViewModel = hiltViewModel()) {
     val isOnClickContinueEnabled = remember { mutableStateOf(false) }
@@ -39,19 +42,21 @@ fun EventsManager(assets: AssetManager, eventViewModel: EventViewModel = hiltVie
 
     Box(modifier = Modifier.fillMaxSize().then(clickableModifier)) {
         eventsToDisplay.sortEvents().forEach { event ->
-            when (event.type) {
-                TypeEvent.CA -> CustomCamera(isTorchLightEnabled.value)
-                TypeEvent.SP -> CustomButton(event, onClick = { eventViewModel.showNextEvents() })
-                TypeEvent.TC -> CustomText(event)
-                TypeEvent.SO -> CustomSound(event, assets)
-                TypeEvent.AI -> CustomAnimation(event)
-                TypeEvent.GM -> isOnClickContinueEnabled.value = true
-                TypeEvent.AT -> CustomText(event, isAnimated = true)
-                TypeEvent.MI -> CustomMovingImage(event)
-                TypeEvent.DT -> CustomDateTime(event)
-                TypeEvent.TL -> isTorchLightEnabled.value = event.isTorchLightActivated == true
-                TypeEvent.SC -> Scan(onClick = { eventViewModel.showNextEvents() })
-                else -> {}
+            key(event.uuid) {
+                when (event.type) {
+                    TypeEvent.CA -> CustomCamera(isTorchLightEnabled.value)
+                    TypeEvent.SP -> CustomButton(event, onClick = { eventViewModel.showNextEvents() })
+                    TypeEvent.TC -> CustomText(event)
+                    TypeEvent.SO -> CustomSound(event, assets)
+                    TypeEvent.AI -> CustomAnimation(event)
+                    TypeEvent.GM -> isOnClickContinueEnabled.value = true
+                    TypeEvent.AT -> CustomText(event, isAnimated = true)
+                    TypeEvent.MI -> CustomMovingImage(event)
+                    TypeEvent.DT -> CustomDateTime(event)
+                    TypeEvent.TL -> isTorchLightEnabled.value = event.isTorchLightActivated == true
+                    TypeEvent.SC -> Scan(onClick = { eventViewModel.showNextEvents() })
+                    else -> {}
+                }
             }
         }
     }
