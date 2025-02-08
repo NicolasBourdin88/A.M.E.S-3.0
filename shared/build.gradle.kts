@@ -44,7 +44,7 @@ kotlin {
 
 android {
     namespace = "com.ames.fr"
-    compileSdk = 34
+    compileSdk = 35
     defaultConfig {
         minSdk = 25
     }

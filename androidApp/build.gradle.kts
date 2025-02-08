@@ -8,7 +8,7 @@ plugins {
 
 android {
     namespace = "com.ames.fr.android"
-    compileSdk = 34
+    compileSdk = 35
     defaultConfig {
         applicationId = "com.ames.fr.android"
         minSdk = 25
