@@ -10,16 +10,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import com.ames.fr.data.model.Event
+import com.ames.fr.data.model.Button
 
 @Composable
-fun CustomButton(event: Event, onClick: () -> Unit) {
-    val fileName = event.fileName!!
-    val xPercentage = event.x!!
-    val yPercentage = event.y!!
-    val originWidth = event.originWidth!!
-    val originHeight = event.originHeight!!
-    val isClickable = event.isTappable!!
+fun CustomButton(buttonData: Button, onClick: () -> Unit) {
+    val fileName = buttonData.fileName
+    val xPercentage = buttonData.x
+    val yPercentage = buttonData.y
+    val originWidth = buttonData.originWidth
+    val originHeight = buttonData.originHeight
+    val isClickable = buttonData.isTappable
 
     val painter = painterResource(id = drawableResourceId(fileName))
 

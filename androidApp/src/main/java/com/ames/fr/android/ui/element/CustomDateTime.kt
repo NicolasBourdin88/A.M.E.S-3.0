@@ -11,14 +11,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.ames.fr.data.model.Event
+import com.ames.fr.data.model.DateTime
 import kotlinx.coroutines.delay
 
 @Composable
-fun CustomDateTime(event: Event) {
-    val fontSize = event.fontSize!!.sp
-    val xPercentage = event.x!!
-    val yPercentage = event.y!!
+fun CustomDateTime(dateDateTime: DateTime) {
+    val fontSize = dateDateTime.fontSize.sp
+    val xPercentage = dateDateTime.x
+    val yPercentage = dateDateTime.y
 
     val configuration = LocalConfiguration.current
     val screenWidth = configuration.screenWidthDp

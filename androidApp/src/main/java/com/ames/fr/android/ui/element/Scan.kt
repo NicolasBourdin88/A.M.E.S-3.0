@@ -1,6 +1,5 @@
 package com.ames.fr.android.ui.element
 
-import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -12,21 +11,17 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import com.ames.fr.android.R
 
 @Composable
 fun Scan(onClick: () -> Unit) {
-    Log.e("nicolas", "Scan")
-    val fileName = "scan"
-
-    val painter = painterResource(id = drawableResourceId(fileName))
-
     Box(
         modifier = Modifier
             .fillMaxSize()
             .padding(16.dp)
     ) {
         Image(
-            painter = painter,
+            painter = painterResource(R.drawable.scan),
             contentDescription = null,
             modifier = Modifier
                 .size(140.dp)

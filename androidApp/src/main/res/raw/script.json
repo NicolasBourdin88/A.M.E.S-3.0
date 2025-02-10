@@ -1,23 +1,25 @@
 [
   {
     "type": "SP",
-    "fileName": "start",
-    "x": 0.75,
-    "y": 0.60,
-    "originWidth": 150.0,
-    "originHeight": 92.0,
-    "anchor": "",
-    "isTappable": true,
-    "eventName": "continueDraw"
+    "eventName": "continueDraw",
+    "button": {
+      "fileName": "start",
+      "x": 0.75,
+      "y": 0.60,
+      "originWidth": 150.0,
+      "originHeight": 92.0,
+      "isTappable": true
+    }
   },
   {
     "type": "TC",
-    "text": "AMES is ready, press start",
-    "x": 0,
-    "y": 0,
-    "fontSize": 20.0,
-    "color": "white",
-    "anchor": "topLeft"
+    "text": {
+      "text": "AMES is ready, press start",
+      "x": 0,
+      "y": 0,
+      "fontSize": 20.0,
+      "color": "white"
+    }
   },
   {
     "type": "SR"
@@ -27,19 +29,23 @@
   },
   {
     "type": "SO",
-    "fileName": "ames_musique_intro",
-    "loop": false,
-    "volume": 100
+    "sound": {
+      "fileName": "ames_musique_intro",
+      "loop": false,
+      "volume": 100
+    }
   },
   {
     "type": "SP",
-    "fileName": "image_boot",
-    "x": 0.25,
-    "y": 0,
-    "originWidth": 480.0,
-    "originHeight": 320.0,
-    "anchor": "",
-    "isTappable": false
+    "button": {
+      "fileName": "image_boot",
+      "x": 0.25,
+      "y": 0,
+      "originWidth": 480.0,
+      "originHeight": 320.0,
+      "anchor": "",
+      "isTappable": false
+    }
   },
   {
     "type": "WA",
@@ -47,20 +53,19 @@
   },
   {
     "type": "AI",
-    "fileName": "fond",
-    "nbImage": 47,
-    "loop": true,
-    "x": 0.0,
-    "y": 0.0,
-    "frameRate": 0.5,
-    "duration": 16,
-    "imageWidth": 1,
-    "imageHeight": 1,
-    "modifiedWidth": 900.0,
-    "modifiedHeight": 480.0,
-    "isTappable": false,
-    "anchor": "topLeft",
-    "contentScale": "fullScreen"
+    "animation": {
+      "fileName": "fond",
+      "nbImage": 47,
+      "loop": true,
+      "x": 0.0,
+      "y": 0.0,
+      "frameRate": 0.5,
+      "imageWidth": 1,
+      "imageHeight": 1,
+      "modifiedWidth": 900.0,
+      "modifiedHeight": 480.0,
+      "contentScale": "fullScreen"
+    }
   },
   {
     "type": "WA",
@@ -72,22 +77,26 @@
   },
   {
     "type": "SO",
-    "fileName": "ames_text_beep",
-    "loop": false,
-    "volume": 100
+    "sound": {
+      "fileName": "ames_text_beep",
+      "loop": false,
+      "volume": 100
+    }
   },
   {
-    "eventName": "introText1",
     "type": "AT",
-    "text": "Bonjour chers utilisateurs de l'A M E S (Amplificateur Mediumnique\nExtrasensoriel) Version trois point zéro. Vous avez été sélectionné par\nL'Agence pour notre programme de recherche sur le potentiel médiumnique\nde la population.\n\nTapez pour continuer.",
-    "x": 0,
-    "y": 0.4,
-    "fontSize": 20.0,
-    "color": "white",
-    "duration": 0,
-    "anchor": "topLeft",
-    "printSpeed": 0.01,
-    "isTappable": false
+    "eventName": "introText1",
+    "text": {
+      "text": "Bonjour chers utilisateurs de l'A M E S (Amplificateur Mediumnique\nExtrasensoriel) Version trois point zéro. Vous avez été sélectionné par\nL'Agence pour notre programme de recherche sur le potentiel médiumnique\nde la population.\n\nTapez pour continuer.",
+      "x": 0,
+      "y": 0.4,
+      "fontSize": 20.0,
+      "color": "white",
+      "duration": 0,
+      "anchor": "topLeft",
+      "printSpeed": 0.01,
+      "isTappable": false
+    }
   },
   {
     "type": "SR"
@@ -98,22 +107,26 @@
   },
   {
     "type": "SO",
-    "fileName": "ames_text_beep",
-    "loop": false,
-    "volume": 100
+    "sound": {
+      "fileName": "ames_text_beep",
+      "loop": false,
+      "volume": 100
+    }
   },
   {
-    "eventName": "introText2",
     "type": "AT",
-    "text": "Le programme A M E S que vous venez d'installer transforme votre téléphone\nen véritable antenne à auras. Si votre sensibilité médiumnique est assez\nélevée, l'Agence vous recontactera pour de plus amples informations et de\nnouvelles consignes.\n\nTapez pour continuer.",
-    "x": 0,
-    "y": 0.4,
-    "fontSize": 20.0,
-    "color": "white",
-    "duration": 5,
-    "anchor": "topLeft",
-    "printSpeed": 0.01,
-    "isTappable": false
+    "eventName": "introText2",
+    "text": {
+      "text": "Le programme A M E S que vous venez d'installer transforme votre téléphone\nen véritable antenne à auras. Si votre sensibilité médiumnique est assez\nélevée, l'Agence vous recontactera pour de plus amples informations et de\nnouvelles consignes.\n\nTapez pour continuer.",
+      "x": 0,
+      "y": 0.4,
+      "fontSize": 20.0,
+      "color": "white",
+      "duration": 5,
+      "anchor": "topLeft",
+      "printSpeed": 0.01,
+      "isTappable": false
+    }
   },
   {
     "type": "SR"
@@ -128,48 +141,56 @@
   },
   {
     "type": "SO",
-    "fileName": "ames_text_beep",
-    "loop": false,
-    "volume": 100
+    "sound": {
+      "fileName": "ames_text_beep",
+      "loop": false,
+      "volume": 100
+    }
   },
   {
-    "eventName": "introText3",
     "type": "AT",
-    "text": "Nous allons maintenant procéder à quelques étapes préparatoires pour le\ntest. Veuillez répondre aux questions suivantes. Confirmez vous que vous\nêtes bien à votre domicile ?",
-    "x": 0,
-    "y": 0.4,
-    "fontSize": 20.0,
-    "color": "white",
-    "duration": 5,
-    "anchor": "topLeft",
-    "printSpeed": 0.01,
-    "isTappable": false
+    "eventName": "introText3",
+    "text": {
+      "text": "Nous allons maintenant procéder à quelques étapes préparatoires pour le\ntest. Veuillez répondre aux questions suivantes. Confirmez vous que vous\nêtes bien à votre domicile ?",
+      "x": 0,
+      "y": 0.4,
+      "fontSize": 20.0,
+      "color": "white",
+      "duration": 5,
+      "anchor": "topLeft",
+      "printSpeed": 0.01,
+      "isTappable": false
+    }
   },
   {
     "type": "WA",
     "duration": 10
   },
   {
-    "eventName": "yesButton",
     "type": "SP",
-    "fileName": "yes",
-    "x": 0.05,
-    "y": 0.70,
-    "originWidth": 150.0,
-    "originHeight": 92.0,
-    "anchor": "",
-    "isTappable": true
+    "eventName": "yesButton",
+    "button": {
+      "fileName": "yes",
+      "x": 0.05,
+      "y": 0.70,
+      "originWidth": 150.0,
+      "originHeight": 92.0,
+      "anchor": "",
+      "isTappable": true
+    }
   },
   {
-    "eventName": "noButton",
     "type": "SP",
-    "fileName": "no",
-    "x": 0.8,
-    "y": 0.70,
-    "originWidth": 150.0,
-    "originHeight": 92.0,
-    "anchor": "",
-    "isTappable": true
+    "eventName": "noButton",
+    "button": {
+      "fileName": "no",
+      "x": 0.8,
+      "y": 0.70,
+      "originWidth": 150.0,
+      "originHeight": 92.0,
+      "anchor": "",
+      "isTappable": true
+    }
   },
   {
     "type": "SR"
@@ -188,48 +209,56 @@
   },
   {
     "type": "SO",
-    "fileName": "ames_text_beep",
-    "loop": false,
-    "volume": 100
+    "sound": {
+      "fileName": "ames_text_beep",
+      "loop": false,
+      "volume": 100
+    }
   },
   {
-    "eventName": "introText4",
     "type": "AT",
-    "text": "Merci. Le test que vous allez subir ne doit pas être interrompu. Pouvez vous\négalement confirmer que vous avez une dizaine de minutes devant vous ?",
-    "x": 0,
-    "y": 0.4,
-    "fontSize": 20.0,
-    "color": "white",
-    "duration": 5,
-    "anchor": "topLeft",
-    "printSpeed": 0.01,
-    "isTappable": false
+    "eventName": "introText4",
+    "text": {
+      "text": "Merci. Le test que vous allez subir ne doit pas être interrompu. Pouvez vous\négalement confirmer que vous avez une dizaine de minutes devant vous ?",
+      "x": 0,
+      "y": 0.4,
+      "fontSize": 20.0,
+      "color": "white",
+      "duration": 5,
+      "anchor": "topLeft",
+      "printSpeed": 0.01,
+      "isTappable": false
+    }
   },
   {
     "type": "WA",
     "duration": 8
   },
   {
-    "eventName": "yesButton2",
     "type": "SP",
-    "fileName": "yes",
-    "x": 0.05,
-    "y": 0.70,
-    "originWidth": 150.0,
-    "originHeight": 92.0,
-    "anchor": "",
-    "isTappable": true
+    "eventName": "yesButton2",
+    "button": {
+      "fileName": "yes",
+      "x": 0.05,
+      "y": 0.70,
+      "originWidth": 150.0,
+      "originHeight": 92.0,
+      "anchor": "",
+      "isTappable": true
+    }
   },
   {
-    "eventName": "noButton2",
     "type": "SP",
-    "fileName": "no",
-    "x": 0.8,
-    "y": 0.70,
-    "originWidth": 150.0,
-    "originHeight": 92.0,
-    "anchor": "",
-    "isTappable": true
+    "eventName": "noButton2",
+    "button": {
+      "fileName": "no",
+      "x": 0.8,
+      "y": 0.70,
+      "originWidth": 150.0,
+      "originHeight": 92.0,
+      "anchor": "",
+      "isTappable": true
+    }
   },
   {
     "type": "SR"
@@ -248,21 +277,25 @@
   },
   {
     "type": "SO",
-    "fileName": "ames_text_beep",
-    "loop": false,
-    "volume": 100
+    "sound": {
+      "fileName": "ames_text_beep",
+      "loop": false,
+      "volume": 100
+    }
   },
   {
     "type": "AT",
-    "text": "Merci. Si vous acceptez de participer à ce test et acceptez\nles conditions précédemment définies, veuillez appliquer\nvotre pouce sur le lecteur qui apparait à l'écran. Votre\nempreinte digitale fera office de signature.",
-    "x": 0,
-    "y": 0.4,
-    "fontSize": 20.0,
-    "color": "white",
-    "duration": 5,
-    "anchor": "topLeft",
-    "printSpeed": 0.01,
-    "isTappable": false
+    "text": {
+      "text": "Merci. Si vous acceptez de participer à ce test et acceptez\nles conditions précédemment définies, veuillez appliquer\nvotre pouce sur le lecteur qui apparait à l'écran. Votre\nempreinte digitale fera office de signature.",
+      "x": 0,
+      "y": 0.4,
+      "fontSize": 20.0,
+      "color": "white",
+      "duration": 5,
+      "anchor": "topLeft",
+      "printSpeed": 0.01,
+      "isTappable": false
+    }
   },
   {
     "type": "WA",
@@ -271,13 +304,15 @@
   {
     "type": "SP",
     "eventName": "fingerPrintButton",
-    "fileName": "fingerprint_button",
-    "x": 0.7,
-    "y": 0.30,
-    "originWidth": 79.0,
-    "originHeight": 191.0,
-    "anchor": "",
-    "isTappable": true
+    "button": {
+      "fileName": "fingerprint_button",
+      "x": 0.7,
+      "y": 0.30,
+      "originWidth": 79.0,
+      "originHeight": 191.0,
+      "anchor": "",
+      "isTappable": true
+    }
   },
   {
     "type": "SR"
@@ -288,20 +323,24 @@
   },
   {
     "type": "SO",
-    "fileName": "ames_scan_empreinte",
-    "loop": false,
-    "volume": 100
+    "sound": {
+      "fileName": "ames_scan_empreinte",
+      "loop": false,
+      "volume": 100
+    }
   },
   {
     "type": "SP",
-    "fileName": "finger_print",
-    "x": 0.7,
-    "y": 0.30,
-    "originWidth": 85.0,
-    "originHeight": 197.0,
-    "anchor": "",
-    "isTappable": false,
-    "eventName": "empty"
+    "button": {
+      "fileName": "finger_print",
+      "x": 0.7,
+      "y": 0.30,
+      "originWidth": 85.0,
+      "originHeight": 197.0,
+      "anchor": "",
+      "isTappable": false,
+      "eventName": "empty"
+    }
   },
   {
     "type": "WA",
@@ -309,16 +348,18 @@
   },
   {
     "type": "MI",
-    "fileName": "finger_print_animation_image",
-    "xBegin": 0.675,
-    "yBegin": 0.250,
-    "xEnd": 0.675,
-    "yEnd": 0.7,
-    "originWidth": 131.0,
-    "originHeight": 73.0,
-    "animationSpeed": 2,
-    "loop": false,
-    "anchor": ""
+    "movableImage": {
+      "fileName": "finger_print_animation_image",
+      "xBegin": 0.675,
+      "yBegin": 0.250,
+      "xEnd": 0.675,
+      "yEnd": 0.7,
+      "originWidth": 131.0,
+      "originHeight": 73.0,
+      "animationSpeed": 2,
+      "loop": false,
+      "anchor": ""
+    }
   },
   {
     "type": "WA",
@@ -328,45 +369,53 @@
     "type": "RMA"
   },
   {
-    "eventName": "sound7",
     "type": "SO",
-    "fileName": "ames_sonnerie",
-    "loop": true,
-    "volume": 100
+    "eventName": "sound7",
+    "sound": {
+      "fileName": "ames_sonnerie",
+      "loop": true,
+      "volume": 100
+    }
   },
   {
     "type": "SP",
-    "fileName": "appel",
-    "x": 0,
-    "y": 0.2,
-    "originWidth": 1000,
-    "originHeight": 1000,
-    "sizeMultiplicator": 1.5,
-    "anchor": "",
-    "isTappable": false,
-    "eventName": "empty"
+    "button": {
+      "fileName": "appel",
+      "x": 0,
+      "y": 0.2,
+      "originWidth": 1000,
+      "originHeight": 1000,
+      "sizeMultiplicator": 1.5,
+      "anchor": "",
+      "isTappable": false,
+      "eventName": "empty"
+    }
   },
   {
     "type": "SP",
-    "fileName": "refuse",
-    "x": 0.2,
-    "y": 0.775,
-    "originWidth": 202.0,
-    "originHeight": 80.0,
-    "anchor": "",
-    "isTappable": true,
-    "eventName": "killApp"
+    "button": {
+      "fileName": "refuse",
+      "x": 0.2,
+      "y": 0.775,
+      "originWidth": 202.0,
+      "originHeight": 80.0,
+      "anchor": "",
+      "isTappable": true,
+      "eventName": "killApp"
+    }
   },
   {
     "type": "SP",
-    "fileName": "answer",
-    "x": 0.6,
-    "y": 0.775,
-    "originWidth": 202.0,
-    "originHeight": 80.0,
-    "anchor": "",
-    "isTappable": true,
-    "eventName": "continueDraw"
+    "button": {
+      "fileName": "answer",
+      "x": 0.6,
+      "y": 0.775,
+      "originWidth": 202.0,
+      "originHeight": 80.0,
+      "anchor": "",
+      "isTappable": true,
+      "eventName": "continueDraw"
+    }
   },
   {
     "type": "SR"
@@ -375,15 +424,17 @@
     "type": "RMA"
   },
   {
-    "eventName": "title",
     "type": "SP",
-    "fileName": "image_boot",
-    "x": 0.25,
-    "y": 0,
-    "originWidth": 480.0,
-    "originHeight": 320.0,
-    "anchor": "",
-    "isTappable": false
+    "eventName": "title",
+    "button": {
+      "fileName": "image_boot",
+      "x": 0.25,
+      "y": 0,
+      "originWidth": 480.0,
+      "originHeight": 320.0,
+      "anchor": "",
+      "isTappable": false
+    }
   },
   {
     "type": "WA",
@@ -391,9 +442,11 @@
   },
   {
     "type": "SO",
-    "fileName": "ames_bruit",
-    "loop": false,
-    "volume": 100
+    "sound": {
+      "fileName": "ames_bruit",
+      "loop": false,
+      "volume": 100
+    }
   },
   {
     "type": "WA",
@@ -405,20 +458,22 @@
   },
   {
     "type": "AI",
-    "fileName": "bruit",
-    "nbImage": 28,
-    "loop": false,
-    "x": 0.0,
-    "y": 0.0,
-    "frameRate": 0.1,
-    "duration": 16,
-    "imageWidth": 480.0,
-    "imageHeight": 320.0,
-    "modifiedWidth": 900.0,
-    "modifiedHeight": 410.0,
-    "isTappable": false,
-    "anchor": "topLeft",
-    "contentScale": "fullScreen"
+    "animation": {
+      "fileName": "bruit",
+      "nbImage": 28,
+      "loop": false,
+      "x": 0.0,
+      "y": 0.0,
+      "frameRate": 0.1,
+      "duration": 16,
+      "imageWidth": 480.0,
+      "imageHeight": 320.0,
+      "modifiedWidth": 900.0,
+      "modifiedHeight": 410.0,
+      "isTappable": false,
+      "anchor": "topLeft",
+      "contentScale": "fullScreen"
+    }
   },
   {
     "type": "WA",
@@ -426,9 +481,11 @@
   },
   {
     "type": "SO",
-    "fileName": "ames_bruit_de_fonctionnement",
-    "loop": false,
-    "volume": 100
+    "sound": {
+      "fileName": "ames_bruit_de_fonctionnement",
+      "loop": false,
+      "volume": 100
+    }
   },
   {
     "type": "WA",
@@ -436,26 +493,30 @@
   },
   {
     "type": "SO",
-    "fileName": "ames_affichage_grille",
-    "loop": false,
-    "volume": 100
+    "sound": {
+      "fileName": "ames_affichage_grille",
+      "loop": false,
+      "volume": 100
+    }
   },
   {
     "type": "AI",
-    "fileName": "grille",
-    "nbImage": 25,
-    "loop": false,
-    "x": 0.0,
-    "y": 0.0,
-    "frameRate": 0.1,
-    "duration": 16,
-    "imageWidth": 480.0,
-    "imageHeight": 320.0,
-    "modifiedWidth": 900.0,
-    "modifiedHeight": 410.0,
-    "isTappable": false,
-    "anchor": "topLeft",
-    "contentScale": "fullScreen"
+    "animation": {
+      "fileName": "grille",
+      "nbImage": 25,
+      "loop": false,
+      "x": 0.0,
+      "y": 0.0,
+      "frameRate": 0.1,
+      "duration": 16,
+      "imageWidth": 480.0,
+      "imageHeight": 320.0,
+      "modifiedWidth": 900.0,
+      "modifiedHeight": 410.0,
+      "isTappable": false,
+      "anchor": "topLeft",
+      "contentScale": "fullScreen"
+    }
   },
   {
     "type": "WA",
@@ -466,51 +527,56 @@
   },
   {
     "type": "SP",
-    "fileName": "grille_25",
-    "x": 0.0,
-    "y": 0.0,
-    "originWidth": 2000.0,
-    "originHeight": 2000.0,
-    "width": 900.0,
-    "height": 410.0,
-    "anchor": "topLeft",
-    "sizeMultiplicator": 1.3,
-    "isTappable": false
+    "button": {
+      "fileName": "grille_25",
+      "x": 0.0,
+      "y": 0.0,
+      "originWidth": 2000.0,
+      "originHeight": 2000.0,
+      "width": 900.0,
+      "height": 410.0,
+      "anchor": "topLeft",
+      "sizeMultiplicator": 1.3,
+      "isTappable": false
+    }
   },
   {
     "type": "MI",
-    "fileName": "faisceau_0",
-    "xBegin": -0.1,
-    "yBegin": 0.0,
-    "xEnd": 1,
-    "yEnd": 0.0,
-    "originWidth": 33.0,
-    "originHeight": 1000.0,
-    "modifiedWidth": 33.0,
-    "modifiedHeight": 500.0,
-    "speedMultiplicator": 0.5,
-    "loop": true,
-    "anchor": ""
+    "movableImage": {
+      "fileName": "faisceau_0",
+      "xBegin": -0.1,
+      "yBegin": 0.0,
+      "xEnd": 1,
+      "yEnd": 0.0,
+      "originWidth": 33.0,
+      "originHeight": 1000.0,
+      "modifiedWidth": 33.0,
+      "modifiedHeight": 500.0,
+      "speedMultiplicator": 0.5,
+      "loop": true,
+      "anchor": ""
+    }
   },
   {
     "type": "WA",
     "duration": 1
   },
   {
-    "type": "CA",
-    "activate": true
+    "type": "CA"
   },
   {
     "type": "SP",
-    "fileName": "battery_full",
-    "x": 0.9,
-    "y": 0.05,
-    "originWidth": 44.0,
-    "originHeight": 27.0,
-    "width": 44.0,
-    "height": 27.0,
-    "anchor": "topLeft",
-    "isTappable": false
+    "button": {
+      "fileName": "battery_full",
+      "x": 0.9,
+      "y": 0.05,
+      "originWidth": 44.0,
+      "originHeight": 27.0,
+      "width": 44.0,
+      "height": 27.0,
+      "anchor": "topLeft",
+      "isTappable": false
+    }
   },
   {
     "type": "WA",
@@ -518,11 +584,13 @@
   },
   {
     "type": "DT",
-    "x": 0.5,
-    "y": 0.05,
-    "fontSize": 20.0,
-    "color": "white",
-    "anchor": "topLeft"
+    "dateTime": {
+      "x": 0.5,
+      "y": 0.05,
+      "fontSize": 20.0,
+      "color": "white",
+      "anchor": "topLeft"
+    }
   },
   {
     "type": "WA",
@@ -530,13 +598,15 @@
   },
   {
     "type": "TC",
-    "text": "Stress Status : 25/100",
-    "eventName": "stressDisplay",
-    "x": 0.1,
-    "y": 0.05,
-    "fontSize": 20.0,
-    "color": "white",
-    "anchor": "topLeft"
+    "text": {
+      "text": "Stress Status : 25/100",
+      "eventName": "stressDisplay",
+      "x": 0.1,
+      "y": 0.05,
+      "fontSize": 20.0,
+      "color": "white",
+      "anchor": "topLeft"
+    }
   },
   {
     "type": "WA",
@@ -544,20 +614,22 @@
   },
   {
     "type": "AI",
-    "fileName": "oeil",
-    "eventName": "oeil",
-    "nbImage": 11,
-    "loop": true,
-    "x": 0.0,
-    "y": 0.0,
-    "frameRate": 0.1,
-    "duration": 16,
-    "imageWidth": 80.0,
-    "imageHeight": 92.0,
-    "sizeMultiplicator": 1.3,
-    "isTappable": false,
-    "anchor": "topLeft",
-    "contentScale": "imageSize"
+    "animation": {
+      "fileName": "oeil",
+      "eventName": "oeil",
+      "nbImage": 11,
+      "loop": true,
+      "x": 0.0,
+      "y": 0.0,
+      "frameRate": 0.1,
+      "duration": 16,
+      "imageWidth": 80.0,
+      "imageHeight": 92.0,
+      "sizeMultiplicator": 1.3,
+      "isTappable": false,
+      "anchor": "topLeft",
+      "contentScale": "imageSize"
+    }
   },
   {
     "type": "WA",
@@ -565,33 +637,39 @@
   },
   {
     "type": "AI",
-    "fileName": "ekg",
-    "eventName": "ekg",
-    "nbImage": 30,
-    "loop": true,
-    "x": 0.0,
-    "y": 0.6,
-    "frameRate": 0.05,
-    "duration": 16,
-    "imageWidth": 950.0,
-    "imageHeight": 160.0,
-    "modifiedWidth": 900.0,
-    "modifiedHeight": 80.0,
-    "isTappable": false,
-    "anchor": "topLeft",
-    "contentScale": "imageSize"
+    "animation": {
+      "fileName": "ekg",
+      "eventName": "ekg",
+      "nbImage": 30,
+      "loop": true,
+      "x": 0.0,
+      "y": 0.6,
+      "frameRate": 0.05,
+      "duration": 16,
+      "imageWidth": 950.0,
+      "imageHeight": 160.0,
+      "modifiedWidth": 900.0,
+      "modifiedHeight": 80.0,
+      "isTappable": false,
+      "anchor": "topLeft",
+      "contentScale": "imageSize"
+    }
   },
   {
     "type": "SO",
-    "fileName": "ames_coeur_01",
-    "loop": false,
-    "volume": 100
+    "sound": {
+      "fileName": "ames_coeur_01",
+      "loop": false,
+      "volume": 100
+    }
   },
   {
     "type": "SO",
-    "fileName": "diane_bonjour",
-    "loop": false,
-    "volume": 100
+    "sound": {
+      "fileName": "diane_bonjour",
+      "loop": false,
+      "volume": 100
+    }
   },
   {
     "type": "WA",
@@ -599,9 +677,11 @@
   },
   {
     "type": "SO",
-    "fileName": "diane_noir_total",
-    "loop": false,
-    "volume": 100
+    "sound": {
+      "fileName": "diane_noir_total",
+      "loop": false,
+      "volume": 100
+    }
   },
   {
     "type": "WA",
@@ -609,9 +689,11 @@
   },
   {
     "type": "SO",
-    "fileName": "diane_message_scan",
-    "loop": false,
-    "volume": 100
+    "sound": {
+      "fileName": "diane_message_scan",
+      "loop": false,
+      "volume": 100
+    }
   },
   {
     "type": "WA",
@@ -619,10 +701,190 @@
   },
   {
     "type": "TL",
-    "activate": true
+    "torchLight": {
+      "isActivated": true
+    }
   },
   {
     "type": "WA",
     "duration": 1
+  },
+  {
+    "type": "SO",
+    "sound": {
+      "fileName": "diane_scan_cuisine",
+      "loop": false,
+      "volume": 100
+    }
+  },
+  {
+    "type": "SC",
+    "eventName": "scanKitchen"
+  },
+  {
+    "type": "SR"
+  },
+  {
+    "type": "AI",
+    "eventName": "animationScannerPiece",
+    "animation": {
+      "nbImage": 95,
+      "fileName": "scan_room",
+      "x": 0,
+      "y": 0,
+      "loop": false,
+      "duration": 5,
+      "imageWidth": 1,
+      "imageHeight": 1,
+      "contentScale": "fullScreen",
+      "frameRate": 0.05
+    }
+  },
+  {
+    "type": "WA",
+    "duration": 3
+  },
+  {
+    "type": "RM",
+    "eventName": "animationScannerPiece"
+  },
+  {
+    "type": "SO",
+    "sound": {
+      "fileName": "ames_rire_02",
+      "loop": false,
+      "volume": 100,
+      "duration": 3
+    }
+  },
+  {
+    "type": "SO",
+    "sound": {
+      "fileName": "ames_coeur_03",
+      "loop": true,
+      "volume": 100,
+      "duration": 1
+    }
+  },
+  {
+    "type": "RM",
+    "eventName": "stressDisplay"
+  },
+  {
+    "type": "TC",
+    "eventName": "stressDisplay",
+    "text": {
+      "text": "Stress Status : 85/100",
+      "x": 0.1,
+      "y": 0.05,
+      "fontSize": 20.0,
+      "color": "white",
+      "anchor": "topLeft"
+    }
+  },
+  {
+    "type": "RM",
+    "eventName": "ekg"
+  },
+  {
+    "type": "AI",
+    "eventName": "ekg",
+    "animation": {
+      "fileName": "ekg",
+      "nbImage": 30,
+      "loop": true,
+      "x": 0.0,
+      "y": 0.6,
+      "frameRate": 0.04,
+      "duration": 16,
+      "imageWidth": 950.0,
+      "imageHeight": 160.0,
+      "modifiedWidth": 900.0,
+      "modifiedHeight": 80.0,
+      "isTappable": false,
+      "anchor": "topLeft",
+      "contentScale": "imageSize"
+    }
+  },
+  {
+    "type": "SO",
+    "sound": {
+      "fileName": "ames_couteau_poignarde",
+      "loop": false,
+      "volume": 100,
+      "duration": 3
+    }
+  },
+  {
+    "type": "WA",
+    "duration": 3
+  },
+  {
+    "type": "SO",
+    "sound": {
+      "fileName": "diane_presence_diffuse",
+      "loop": false,
+      "volume": 100,
+      "duration": 6
+    }
+  },
+  {
+    "type": "WA",
+    "duration": 6
+  },
+  {
+    "type": "SO",
+    "sound": {
+      "fileName": "ames_cri_01",
+      "loop": false,
+      "volume": 100,
+      "duration": 2
+    }
+  },
+  {
+    "type": "TL",
+    "torchLight": {
+      "isActivated": false
+    }
+  },
+  {
+    "type": "WA",
+    "duration": 2
+  },
+  {
+    "type": "SO",
+    "sound": {
+      "fileName": "diane_aller_trop_loin",
+      "loop": false,
+      "volume": 100,
+      "duration": 2
+    }
+  },
+  {
+    "type": "WA",
+    "duration": 25
+  },
+  {
+    "type": "GH",
+    "ghost": {
+      "numberOfImages": 9,
+      "ghostSoundFileName": "ames_cri_02",
+      "numberOfShoots": 1,
+      "ghostImageFileName": "first_ghost",
+      "animationDuration": 2,
+      "movementDuration": 3,
+      "movementIsLooped": false,
+      "xTolerance": 0.3,
+      "yTolerance": 0.3,
+      "ghostPhi": 30,
+      "ghostTeta": 0,
+      "ghostDistance": 0,
+      "scaleFactor": 2,
+      "speed": 0.05,
+      "updateRate": 1
+    }
+  },
+  {
+    "type": "SR"
   }
 ]

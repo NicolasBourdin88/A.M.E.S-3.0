@@ -7,13 +7,13 @@ import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.remember
-import com.ames.fr.data.model.Event
+import com.ames.fr.data.model.Sound
 
 @Composable
-fun CustomSound(event: Event, assets: AssetManager) {
+fun CustomSound(dataSound: Sound, assets: AssetManager) {
     val mediaPlayer = remember { MediaPlayer() }
 
-    DisposableEffect(event.fileName) {
+    DisposableEffect(dataSound.fileName) {
         fun playSound() {
             runCatching {
                 if (mediaPlayer.isPlaying) {
@@ -21,7 +21,7 @@ fun CustomSound(event: Event, assets: AssetManager) {
                     mediaPlayer.reset()
                 }
 
-                val descriptor: AssetFileDescriptor = assets.openFd("${event.fileName}.mp3")
+                val descriptor: AssetFileDescriptor = assets.openFd("${dataSound.fileName}.mp3")
                 mediaPlayer.setDataSource(
                     descriptor.fileDescriptor,
                     descriptor.startOffset,
@@ -33,7 +33,7 @@ fun CustomSound(event: Event, assets: AssetManager) {
                     it.start()
                 }
 
-                mediaPlayer.isLooping = event.isLoop ?: false
+                mediaPlayer.isLooping = dataSound.isLoop
                 mediaPlayer.prepareAsync()
             }.onFailure {
                 Log.e("CustomSound", "Song failed to read : ${it.message}")
@@ -51,7 +51,6 @@ fun CustomSound(event: Event, assets: AssetManager) {
                 mediaPlayer.release()
             }.onFailure {
                 Log.e("CustomSound", "Song failed to liberate ${it.message}")
-
             }
         }
     }

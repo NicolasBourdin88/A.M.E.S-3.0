@@ -1,6 +1,5 @@
 package com.ames.fr.android.ui.element
 
-import android.util.Log
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
@@ -13,15 +12,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.ames.fr.data.model.Event
+import com.ames.fr.data.model.Text
 import kotlinx.coroutines.delay
 
 @Composable
-fun CustomText(event: Event, isAnimated: Boolean = false) {
-    val fontSize = event.fontSize!!.sp
-    val originalText = event.text!!
-    val xPercentage = event.x!!
-    val yPercentage = event.y!!
+fun CustomText(textData: Text, isAnimated: Boolean = false) {
+    val fontSize = textData.fontSize.sp
+    val originalText = textData.text
+    val xPercentage = textData.x
+    val yPercentage = textData.y
 
     val configuration = LocalConfiguration.current
     val screenWidth = configuration.screenWidthDp
@@ -37,7 +36,7 @@ fun CustomText(event: Event, isAnimated: Boolean = false) {
         if (isAnimated) {
             textToDisplay.value = ""
             for (i in originalText.indices) {
-                delay((event.printSpeed!! * 1000).toLong())
+                delay((textData.printSpeed!! * 1000).toLong())
                 textToDisplay.value += originalText[i]
             }
         }

@@ -15,21 +15,21 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat.getDrawable
-import com.ames.fr.data.model.Event
+import com.ames.fr.data.model.Animation
 import com.google.accompanist.drawablepainter.rememberDrawablePainter
 import kotlinx.coroutines.delay
-import com.ames.fr.data.model.Event.Companion.ContentScale as ContentScaleEvent
+import com.ames.fr.data.model.Animation.Companion.ContentScale as ContentScaleEvent
 
 @Composable
-fun CustomAnimation(event: Event) {
-    val fileName = remember { mutableStateOf("${event.fileName!!}_1") }
-    val numberOfImages = event.nbImage!!
-    val originWidth = event.imageWidth!!
-    val originHeight = event.imageHeight!!
-    val xPercentage = event.x!!
-    val yPercentage = event.y!!
+fun CustomAnimation(animationData: Animation) {
+    val fileName = remember { mutableStateOf("${animationData.fileName}_1") }
+    val numberOfImages = animationData.nbImage
+    val originWidth = animationData.imageWidth
+    val originHeight = animationData.imageHeight
+    val xPercentage = animationData.x
+    val yPercentage = animationData.y
 
-    val contentScaleEvent = event.contentScale!!
+    val contentScaleEvent = animationData.contentScale
     val shouldChangeSize = contentScaleEvent == ContentScaleEvent.IMAGE_SIZE
     val configuration = LocalConfiguration.current
     val screenWidth = configuration.screenWidthDp
@@ -47,9 +47,9 @@ fun CustomAnimation(event: Event) {
 
     LaunchedEffect(Unit) {
         while (true) {
-            repeat(numberOfImages) {
-                delay((event.frameRate!! * 1000).toLong())
-                fileName.value = "${event.fileName!!}_$it"
+            repeat(numberOfImages - 1) {
+                delay((animationData.frameRate * 1000).toLong())
+                fileName.value = "${animationData.fileName}_${it + 1}"
             }
         }
     }

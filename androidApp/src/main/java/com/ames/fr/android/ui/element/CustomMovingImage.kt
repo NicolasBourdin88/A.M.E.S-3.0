@@ -1,6 +1,5 @@
 package com.ames.fr.android.ui.element
 
-import android.util.Log
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
@@ -18,19 +17,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import com.ames.fr.data.model.Event
+import com.ames.fr.data.model.MovableImage
 import kotlinx.coroutines.delay
 
 @Composable
-fun CustomMovingImage(event: Event) {
-    val fileName = event.fileName!!
-    val xStartPercentage = event.xBegin!!
-    val yStartPercentage = event.yBegin!!
-    val xEndPercentage = event.xEnd!!
-    val yEndPercentage = event.yEnd!!
-    val originWidth = event.originWidth!!
-    val originHeight = event.originHeight!!
-    val isLoop = event.isLoop!!
+fun CustomMovingImage(dataMovableImage: MovableImage) {
+    val fileName = dataMovableImage.fileName
+    val xStartPercentage = dataMovableImage.xBegin
+    val yStartPercentage = dataMovableImage.yBegin
+    val xEndPercentage = dataMovableImage.xEnd
+    val yEndPercentage = dataMovableImage.yEnd
+    val originWidth = dataMovableImage.originWidth
+    val originHeight = dataMovableImage.originHeight
+    val isLoop = dataMovableImage.isLoop
 
     val painter = painterResource(id = drawableResourceId(fileName))
 
