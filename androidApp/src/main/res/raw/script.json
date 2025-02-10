@@ -774,7 +774,7 @@
     "type": "TC",
     "eventName": "stressDisplay",
     "text": {
-      "text": "Stress Status : 85/100",
+      "text": "Stress Status : 25/100",
       "x": 0.1,
       "y": 0.05,
       "fontSize": 20.0,
@@ -880,7 +880,7 @@
       "ghostTeta": 0,
       "ghostDistance": 0,
       "scaleFactor": 2,
-      "speed": 0.05,
+      "speed": 0.1,
       "updateRate": 1
     }
   },

@@ -33,44 +33,45 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.Stroke
-import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.dp
 import com.ames.fr.android.R
 import com.ames.fr.data.model.Ghost
 import kotlinx.coroutines.delay
-import java.lang.Math.log1p
 import kotlin.math.abs
-import kotlin.math.ln1p
-import kotlin.math.log10
-import kotlin.math.sign
 
 const val crossHairWidth = 150
+const val ghostSize = 200
+const val maxChargeLoad = 6
 
 @Composable
 fun Ghost(ghost: Ghost, onGhostHit: () -> Unit) {
-    val context = LocalContext.current
-    val sensorManager = remember { context.getSystemService(SensorManager::class.java) }
-
     var chargeLoad by remember { mutableIntStateOf(0) }
+    var offsetX by remember { mutableFloatStateOf(0f) }
+    var offsetY by remember { mutableFloatStateOf(0f) }
+    var sizeMultiplication = 1f
 
     LaunchedEffect(Unit) {
         while (true) {
             delay(1000L)
-            if (chargeLoad + 1 == 7) {
-                chargeLoad -= 4
-            } else {
-                chargeLoad += 1
+            if (chargeLoad < maxChargeLoad) {
+                chargeLoad++
             }
         }
     }
 
     Box(modifier = Modifier.fillMaxSize()) {
 
-        AnimatedGhost(ghost)
+        AnimatedGhost(ghost, onUpdatePosition = { newX, newY, newSizeMultiplication ->
+            offsetX = newX
+            offsetY = newY
+            sizeMultiplication = newSizeMultiplication
+        })
 
         Column(
             modifier = Modifier.fillMaxSize(),
@@ -83,26 +84,76 @@ fun Ghost(ghost: Ghost, onGhostHit: () -> Unit) {
         }
     }
 
-    ButtonExorcist({
-        // See if ghost in crosshair if yes call onGhostHit
+    val density = LocalDensity.current
+
+    ButtonExorcist(onClick = {
+        if (chargeLoad >= 4) {
+            chargeLoad -= 4
+            if (isGhostInCrossHair(
+                    offsetX,
+                    offsetY,
+                    density,
+                    sizeMultiplication
+                )
+            ) onGhostHit.invoke()
+        }
     })
+
+}
+
+
+private fun isGhostInCrossHair(
+    offsetX: Float,
+    offsetY: Float,
+    density: Density,
+    sizeMultiplication: Float,
+): Boolean {
+    val ghostSizePx = with(density) { (ghostSize * sizeMultiplication).dp.toPx() }
+    val crossHairWidthPx = with(density) { crossHairWidth.dp.toPx() }
+
+    val ghostLeft = offsetX - ghostSizePx / 2
+    val ghostRight = offsetX + ghostSizePx / 2
+    val ghostTop = offsetY - ghostSizePx / 2
+    val ghostBottom = offsetY + ghostSizePx / 2
+
+    val crossHairLeft = -crossHairWidthPx / 2
+    val crossHairRight = crossHairWidthPx / 2
+    val crossHairTop = -crossHairWidthPx / 2
+    val crossHairBottom = crossHairWidthPx / 2
+
+
+
+    return abs(ghostLeft) > abs(crossHairLeft) &&
+            abs(ghostRight) > abs(crossHairRight) &&
+            abs(ghostTop) > abs(crossHairTop) &&
+            abs(ghostBottom) > abs(crossHairBottom)
 }
 
 
 @Composable
-fun AnimatedGhost(ghost: Ghost) {
+fun AnimatedGhost(
+    ghost: Ghost,
+    onUpdatePosition: (Float, Float, Float) -> Unit
+) {
     val context = LocalContext.current
     val sensorManager = remember { context.getSystemService(SensorManager::class.java) }
     val rotationSensor = sensorManager?.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR)
 
-    var offsetX by remember { mutableStateOf(0f) }
-    var offsetY by remember { mutableStateOf(0f) }
-    val frameIndex = remember { mutableStateOf(1) }
+    var offsetX by remember { mutableFloatStateOf(0f) }
+    var offsetY by remember { mutableFloatStateOf(0f) }
+    val frameIndex = remember { mutableIntStateOf(1) }
+    var sizeMultiplicationGhost by remember { mutableFloatStateOf(1f) }
 
-    // Référence initiale pour stabiliser le fantôme
     var initialAzimuth by remember { mutableStateOf<Float?>(null) }
     var initialPitch by remember { mutableStateOf<Float?>(null) }
     var initialRoll by remember { mutableStateOf<Float?>(null) }
+
+    LaunchedEffect(Unit) {
+        while (true) {
+            delay(30)
+            sizeMultiplicationGhost += 0.01F
+        }
+    }
 
     val sensorListener = remember {
         object : SensorEventListener {
@@ -115,9 +166,12 @@ fun AnimatedGhost(ghost: Ghost) {
                         SensorManager.getRotationMatrixFromVector(rotationMatrix, it.values)
                         SensorManager.getOrientation(rotationMatrix, orientationValues)
 
-                        val azimuth = Math.toDegrees(orientationValues[0].toDouble()).toFloat()  // Rotation horizontale
-                        val pitch = Math.toDegrees(orientationValues[1].toDouble()).toFloat()   // Inclinaison haut/bas
-                        val roll = Math.toDegrees(orientationValues[2].toDouble()).toFloat()    // Inclinaison latérale
+                        val azimuth = Math.toDegrees(orientationValues[0].toDouble())
+                            .toFloat()  // Rotation horizontale
+                        val pitch = Math.toDegrees(orientationValues[1].toDouble())
+                            .toFloat()   // Inclinaison haut/bas
+                        val roll = Math.toDegrees(orientationValues[2].toDouble())
+                            .toFloat()    // Inclinaison latérale
 
                         if (initialAzimuth == null) {
                             initialAzimuth = azimuth
@@ -133,6 +187,8 @@ fun AnimatedGhost(ghost: Ghost) {
                         val rollDiff = initialRoll!! - roll
 
                         offsetY = (pitchDiff + rollDiff) * 15f  // Ajustement de l'échelle pour le Y
+
+                        onUpdatePosition(offsetX, offsetY, sizeMultiplicationGhost)
                     }
                 }
             }
@@ -142,16 +198,24 @@ fun AnimatedGhost(ghost: Ghost) {
     }
 
     LaunchedEffect(Unit) {
-        rotationSensor?.let { sensorManager?.registerListener(sensorListener, it, SensorManager.SENSOR_DELAY_UI) }
+        rotationSensor?.let {
+            sensorManager.registerListener(
+                sensorListener,
+                it,
+                SensorManager.SENSOR_DELAY_UI
+            )
+        }
 
         while (true) {
-            delay((ghost.speed * 1000).toLong() / ghost.numberOfImages)
-            frameIndex.value = (frameIndex.value % ghost.numberOfImages) + 1
+            delay((ghost.speed * 1000).toLong())
+            frameIndex.intValue = (frameIndex. intValue % ghost.numberOfImages) + 1
         }
     }
 
     val imageName = "${ghost.ghostImageFileName}_${frameIndex.value}"
     val ghostImage = painterResource(id = drawableResourceId(imageName))
+
+    val density = LocalDensity.current
 
     Box(
         modifier = Modifier.fillMaxSize(),
@@ -159,10 +223,12 @@ fun AnimatedGhost(ghost: Ghost) {
     ) {
         Image(
             painter = ghostImage,
-            contentDescription = "Fantôme animé",
+            contentDescription = null,
             modifier = Modifier
-                .size(200.dp)
-                .offset(x = with(LocalDensity.current) { offsetX.dp }, y = with(LocalDensity.current) { offsetY.dp })
+                .width((ghostSize * sizeMultiplicationGhost).dp)
+                .aspectRatio(ghostImage.intrinsicSize.width / ghostImage.intrinsicSize.height)  // Conserver le ratio original
+                .offset(x = with(density) { offsetX.dp }, y = with(density) { offsetY.dp }),
+            contentScale = ContentScale.Fit
         )
     }
 }
@@ -175,7 +241,7 @@ fun ChargeBar(chargeLoad: Int = 1) {
             .width(crossHairWidth.dp),
         horizontalArrangement = Arrangement.SpaceEvenly
     ) {
-        repeat(6) { index ->
+        repeat(maxChargeLoad) { index ->
             val isColored = index < chargeLoad
             Box(
                 modifier = Modifier

@@ -2,6 +2,7 @@ package com.ames.fr.android.ui
 
 import android.content.res.AssetManager
 import android.hardware.SensorManager
+import android.util.Log
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -25,6 +26,7 @@ import com.ames.fr.android.ui.element.Ghost
 import com.ames.fr.android.ui.element.Scan
 import com.ames.fr.data.model.Event
 import com.ames.fr.data.model.Event.Companion.TypeEvent
+import kotlin.math.log
 import kotlin.uuid.ExperimentalUuidApi
 
 @OptIn(ExperimentalUuidApi::class)
@@ -43,7 +45,9 @@ fun EventsManager(assets: AssetManager, eventViewModel: EventViewModel = hiltVie
         Modifier
     }
 
-    Box(modifier = Modifier.fillMaxSize().then(clickableModifier)) {
+    Box(modifier = Modifier
+        .fillMaxSize()
+        .then(clickableModifier)) {
         eventsToDisplay.sortEvents().forEach { event ->
             key(event.uuid) {
                 when (event.type) {
@@ -58,7 +62,11 @@ fun EventsManager(assets: AssetManager, eventViewModel: EventViewModel = hiltVie
                     TypeEvent.DT -> CustomDateTime(event.dateTime!!)
                     TypeEvent.TL -> isTorchLightEnabled.value = event.torchLight!!.isActivated == true
                     TypeEvent.SC -> Scan(onClick = { eventViewModel.showNextEvents() })
-                    TypeEvent.GH -> Ghost(event.ghost!!, onGhostHit = { /* TODO JE GERE ICI TKT */ })
+                    TypeEvent.GH -> Ghost(event.ghost!!, onGhostHit = {
+                        Log.e(
+                            "nicolas",
+                            "NEXT EVENT SIUUUU"
+                        ) })
                     else -> {}
                 }
             }
@@ -68,6 +76,10 @@ fun EventsManager(assets: AssetManager, eventViewModel: EventViewModel = hiltVie
 
 private fun List<Event>.sortEvents(): List<Event> {
     return this.sortedBy { event ->
-        if (event.type == TypeEvent.CA) 0 else 1
+        when (event.type) {
+            TypeEvent.CA -> 0
+            TypeEvent.AI -> 1
+            else -> 2
+        }
     }
 }
