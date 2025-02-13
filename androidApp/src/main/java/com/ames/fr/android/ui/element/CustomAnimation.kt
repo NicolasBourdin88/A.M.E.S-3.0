@@ -56,7 +56,10 @@ fun CustomAnimation(animationData: Animation) {
 
     Image(
         painter = rememberDrawablePainter(
-            drawable = getDrawable(LocalContext.current, drawableResourceId(fileName.value))
+            drawable = getDrawable(
+                LocalContext.current,
+                drawableResourceId(fileName.value)
+            )
         ),
         contentDescription = "Loading animation",
         modifier = modifier.offset(x = adjustedX.dp, y = adjustedY.dp),

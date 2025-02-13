@@ -136,8 +136,12 @@
     "eventName": "introText2"
   },
   {
+    "type": "RM",
+    "eventName": "onClickOnScreenContinueDrawEvent"
+  },
+  {
     "type": "GM",
-    "eventName": "empty"
+    "eventName": "onClickOnButtonContinueDrawEvent"
   },
   {
     "type": "SO",
@@ -164,7 +168,7 @@
   },
   {
     "type": "WA",
-    "duration": 10
+    "duration": 4
   },
   {
     "type": "SP",
@@ -232,7 +236,7 @@
   },
   {
     "type": "WA",
-    "duration": 8
+    "duration": 4
   },
   {
     "type": "SP",
@@ -299,7 +303,7 @@
   },
   {
     "type": "WA",
-    "duration": 12
+    "duration": 5
   },
   {
     "type": "SP",
@@ -697,7 +701,7 @@
   },
   {
     "type": "WA",
-    "duration": 47
+    "duration": 59
   },
   {
     "type": "TL",
@@ -741,12 +745,29 @@
     }
   },
   {
+    "type": "SO",
+    "eventName": "soundKitchenRoom",
+    "sound": {
+      "fileName": "ames_scan_piece",
+      "loop": false,
+      "volume": 100
+    }
+  },
+  {
+    "type": "RM",
+    "eventName": "scanKitchen"
+  },
+  {
     "type": "WA",
     "duration": 3
   },
   {
     "type": "RM",
     "eventName": "animationScannerPiece"
+  },
+  {
+    "type": "RM",
+    "eventName": "soundKitchenRoom"
   },
   {
     "type": "SO",
@@ -866,6 +887,7 @@
   },
   {
     "type": "GH",
+    "eventName": "ghost_1",
     "ghost": {
       "numberOfImages": 9,
       "ghostSoundFileName": "ames_cri_02",
@@ -886,5 +908,415 @@
   },
   {
     "type": "SR"
+  },
+  {
+    "type": "RM",
+    "eventName": "ghost_1"
+  },
+  {
+    "type": "WA",
+    "duration": 0.5
+  },
+  {
+    "type": "GH",
+    "eventName": "ghost_2",
+    "ghost": {
+      "numberOfImages": 6,
+      "ghostSoundFileName": "ames_cri_02",
+      "numberOfShoots": 1,
+      "ghostImageFileName": "second_ghost",
+      "animationDuration": 2,
+      "movementDuration": 3,
+      "movementIsLooped": false,
+      "xTolerance": 0.3,
+      "yTolerance": 0.3,
+      "ghostPhi": 30,
+      "ghostTeta": 0,
+      "ghostDistance": 0,
+      "scaleFactor": 2,
+      "speed": 0.1,
+      "updateRate": 1
+    }
+  },
+  {
+    "type": "SR"
+  },
+  {
+    "type": "WA",
+    "duration": 0.5
+  },
+  {
+    "type": "RM",
+    "eventName": "ghost_2"
+  },
+  {
+    "type": "GH",
+    "eventName": "ghost_3",
+    "ghost": {
+      "numberOfImages": 7,
+      "ghostSoundFileName": "ames_cri_02",
+      "numberOfShoots": 1,
+      "ghostImageFileName": "third_ghost",
+      "animationDuration": 2,
+      "movementDuration": 3,
+      "movementIsLooped": false,
+      "xTolerance": 0.3,
+      "yTolerance": 0.3,
+      "ghostPhi": 30,
+      "ghostTeta": 0,
+      "ghostDistance": 0,
+      "scaleFactor": 2,
+      "speed": 0.1,
+      "updateRate": 1
+    }
+  },
+  {
+    "type": "SR"
+  },
+  {
+    "type": "WA",
+    "duration": 0.5
+  },
+  {
+    "type": "RM",
+    "eventName": "ghost_3"
+  },
+  {
+    "type": "GH",
+    "eventName": "ghost_4",
+    "ghost": {
+      "numberOfImages": 7,
+      "ghostSoundFileName": "ames_cri_02",
+      "numberOfShoots": 1,
+      "ghostImageFileName": "fourth_ghost",
+      "animationDuration": 2,
+      "movementDuration": 3,
+      "movementIsLooped": false,
+      "xTolerance": 0.3,
+      "yTolerance": 0.3,
+      "ghostPhi": 30,
+      "ghostTeta": 0,
+      "ghostDistance": 0,
+      "scaleFactor": 2,
+      "speed": 0.1,
+      "updateRate": 1
+    }
+  },
+  {
+    "type": "SR"
+  },
+  {
+    "type": "RM",
+    "eventName": "ghost_4"
+  },
+  {
+    "type": "SO",
+    "sound": {
+      "fileName": "diane_scan_sdb",
+      "loop": false,
+      "volume": 100,
+      "duration": 2
+    }
+  },
+  {
+    "type": "TL",
+    "torchLight": {
+      "isActivated": true
+    }
+  },
+  {
+    "type": "WA",
+    "duration": 19
+  },
+  {
+    "type": "SC",
+    "eventName": "scanSDB"
+  },
+  {
+    "type": "SR"
+  },
+  {
+    "type": "AI",
+    "eventName": "animationScannerPiece",
+    "animation": {
+      "nbImage": 95,
+      "fileName": "scan_room",
+      "x": 0,
+      "y": 0,
+      "loop": false,
+      "duration": 5,
+      "imageWidth": 1,
+      "imageHeight": 1,
+      "contentScale": "fullScreen",
+      "frameRate": 0.05
+    }
+  },
+  {
+    "type": "SO",
+    "eventName": "soundScanRoom",
+    "sound": {
+      "fileName": "ames_scan_piece",
+      "loop": false,
+      "volume": 100
+    }
+  },
+  {
+    "type": "WA",
+    "duration": 3
+  },
+  {
+    "type": "RM",
+    "eventName": "scanSDB"
+  },
+  {
+    "type": "RM",
+    "eventName": "animationScannerPiece"
+  },
+  {
+    "type": "RM",
+    "eventName": "soundScanRoom"
+  },
+  {
+    "type": "SO",
+    "sound": {
+      "fileName": "ames_couteau_01",
+      "loop": false,
+      "volume": 100
+    }
+  },
+  {
+    "type": "SO",
+    "sound": {
+      "fileName": "ames_pleurs_01",
+      "loop": false,
+      "volume": 100,
+      "duration": 2
+    }
+  },
+  {
+    "type": "SO",
+    "sound": {
+      "fileName": "ames_verre_01",
+      "loop": false,
+      "volume": 100,
+      "duration": 1
+    }
+  },
+  {
+    "type": "SO",
+    "sound": {
+      "fileName": "ames_rire_03",
+      "loop": false,
+      "volume": 100,
+      "duration": 2
+    }
+  },
+  {
+    "type": "WA",
+    "duration": 3
+  },
+  {
+    "type": "SO",
+    "sound": {
+      "fileName": "diane_scan_chambre",
+      "loop": false,
+      "volume": 100,
+      "duration": 12
+    }
+  },
+  {
+    "type": "WA",
+    "duration": 12
+  },
+  {
+    "type": "SC",
+    "eventName": "scanRoom"
+  },
+  {
+    "type": "SR"
+  },
+  {
+    "type": "SO",
+    "sound": {
+      "fileName": "ames_scan_piece",
+      "loop": false,
+      "volume": 100,
+      "duration": 0.1
+    }
+  },
+  {
+    "type": "AI",
+    "eventName": "animationScannerPiece",
+    "animation": {
+      "nbImage": 95,
+      "fileName": "scan_room",
+      "x": 0,
+      "y": 0,
+      "loop": false,
+      "duration": 5,
+      "imageWidth": 1,
+      "imageHeight": 1,
+      "contentScale": "fullScreen",
+      "frameRate": 0.05
+    }
+  },
+  {
+    "type": "WA",
+    "duration": 3
+  },
+  {
+    "type": "RM",
+    "eventName": "scanRoom"
+  },
+  {
+    "type": "RM",
+    "eventName": "animationScannerPiece"
+  },
+  {
+    "type": "RM",
+    "eventName": "soundScanRoom"
+  },
+  {
+    "type": "SO",
+    "sound": {
+      "fileName": "diane_drap",
+      "loop": false,
+      "volume": 100,
+      "duration": 10
+    }
+  },
+  {
+    "type": "WA",
+    "duration": 21
+  },
+  {
+    "type": "TL",
+    "torchLight": {
+      "isActivated": false
+    }
+  },
+  {
+    "type": "SO",
+    "eventName": "dianePresque",
+    "sound": {
+      "fileName": "diane_on_la_tient_presque",
+      "loop": false,
+      "volume": 100,
+      "duration": 8
+    }
+  },
+  {
+    "type": "WA",
+    "duration": 5
+  },
+  {
+    "type": "RM",
+    "eventName": "dianePresque"
+  },
+  {
+    "type": "GH",
+    "eventName": "ghostBed",
+    "ghost": {
+      "numberOfImages": 15,
+      "movementDuration": 3,
+      "ghostImageFileName": "ghost_bed",
+      "x": 0.5,
+      "y": 0.5,
+      "animationDuration": 2,
+      "ghostSoundFileName": null,
+      "numberOfShoots": 1,
+      "movementIsLooped": false,
+      "xTolerance": 0.3,
+      "yTolerance": 0.3,
+      "ghostPhi": 30,
+      "ghostTeta": 0,
+      "ghostDistance": 0,
+      "speed": 0.1,
+      "updateRate": 1
+    }
+  },
+  {
+    "type": "SR"
+  },
+  {
+    "type": "RM",
+    "eventName": "ghostBed"
+  },
+  {
+    "type": "SO",
+    "sound": {
+      "fileName": "diane_scan_plafond",
+      "loop": false,
+      "volume": 100,
+      "duration": 5
+    }
+  },
+  {
+    "type": "WA",
+    "duration": 10
+  },
+  {
+    "type": "GH",
+    "eventName": "ghost_cell",
+    "ghost": {
+      "numberOfImages": 17,
+      "ghostSoundFileName": "ames_cri_01",
+      "ghostImageFileName": "ghost_ceil",
+      "animationDuration": 2,
+      "movementDuration": 10,
+      "movementIsLooped": false,
+      "xTolerance": 0.3,
+      "yTolerance": 0.3,
+      "ghostPhi": 50,
+      "scaleFactor": 2,
+      "speed": 0.05,
+      "numberOfShoots": 1,
+      "ghostTeta": 0,
+      "ghostDistance": 0,
+      "updateRate": 1
+    }
+  },
+  {
+    "type": "SR"
+  },
+  {
+    "type": "RMA"
+  },
+  {
+    "type": "TL",
+    "torchLight": {
+      "isActivated": true
+    }
+  },
+  {
+    "type": "SO",
+    "sound": {
+      "fileName": "diane_fin_email",
+      "loop": false,
+      "volume": 100,
+      "duration": 29
+    }
+  },
+  {
+    "type": "SP",
+    "button": {
+      "fileName": "mail",
+      "x": 0.0,
+      "y": 0.0,
+      "originWidth": 1000.0,
+      "originHeight": 1000.0,
+      "isTappable": false
+    }
+  },
+  {
+    "type": "SP",
+    "button": {
+      "fileName": "game_over",
+      "x": 0.0,
+      "y": 0.0,
+      "originWidth": 1000.0,
+      "originHeight": 1000.0,
+      "isTappable": false
+    }
   }
 ]

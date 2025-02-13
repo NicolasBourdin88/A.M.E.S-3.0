@@ -80,8 +80,14 @@ class EventViewModel @Inject constructor(
         return eventsList
     }
 
+    fun showGameOver() {
+        _eventsToDisplayFlow.value =
+            remainingEvents.filter { it.button?.fileName == "game_over" }.toMutableList()
+        remainingEvents.clear()
+    }
+
     companion object {
-        const val IS_TEST = true
+        const val IS_TEST = false
         const val DURATION_TEST = 1.0F
     }
 }

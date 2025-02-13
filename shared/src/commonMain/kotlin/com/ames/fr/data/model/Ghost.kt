@@ -5,7 +5,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class Ghost(
     val numberOfImages: Int,
-    val ghostSoundFileName: String,
+    val ghostSoundFileName: String? = null,
     val numberOfShoots: Int,
     val ghostImageFileName: String,
     val animationDuration: Int,
@@ -16,7 +16,6 @@ data class Ghost(
     val ghostPhi: Int,
     val ghostTeta: Int,
     val ghostDistance: Int,
-    val scaleFactor: Int,
     val speed: Double,
     val updateRate: Int
 )

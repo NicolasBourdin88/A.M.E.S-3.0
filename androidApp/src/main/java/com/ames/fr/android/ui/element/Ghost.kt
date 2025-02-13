@@ -4,6 +4,7 @@ import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
+import android.util.Log
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -58,7 +59,7 @@ fun Ghost(ghost: Ghost, onGhostHit: () -> Unit) {
 
     LaunchedEffect(Unit) {
         while (true) {
-            delay(1000L)
+            delay(500L)
             if (chargeLoad < maxChargeLoad) {
                 chargeLoad++
             }
@@ -87,15 +88,9 @@ fun Ghost(ghost: Ghost, onGhostHit: () -> Unit) {
     val density = LocalDensity.current
 
     ButtonExorcist(onClick = {
-        if (chargeLoad >= 4) {
-            chargeLoad -= 4
-            if (isGhostInCrossHair(
-                    offsetX,
-                    offsetY,
-                    density,
-                    sizeMultiplication
-                )
-            ) onGhostHit.invoke()
+        if (chargeLoad >= 6) {
+            chargeLoad -= 6
+            if (isGhostInCrossHair(offsetX, offsetY, density, sizeMultiplication)) onGhostHit.invoke()
         }
     })
 
@@ -122,7 +117,7 @@ private fun isGhostInCrossHair(
     val crossHairBottom = crossHairWidthPx / 2
 
 
-
+    return true
     return abs(ghostLeft) > abs(crossHairLeft) &&
             abs(ghostRight) > abs(crossHairRight) &&
             abs(ghostTop) > abs(crossHairTop) &&
@@ -213,7 +208,14 @@ fun AnimatedGhost(
     }
 
     val imageName = "${ghost.ghostImageFileName}_${frameIndex.value}"
-    val ghostImage = painterResource(id = drawableResourceId(imageName))
+    val ghostImage =
+        runCatching {
+            painterResource(id = drawableResourceId(imageName))
+        }.getOrNull()
+
+    if (ghostImage == null) {
+        Log.e("nicolas", "AnimatedGhost - gh: $imageName")
+    }
 
     val density = LocalDensity.current
 
@@ -222,7 +224,7 @@ fun AnimatedGhost(
         contentAlignment = Alignment.Center
     ) {
         Image(
-            painter = ghostImage,
+            painter = ghostImage!!,
             contentDescription = null,
             modifier = Modifier
                 .width((ghostSize * sizeMultiplicationGhost).dp)
